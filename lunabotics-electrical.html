@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEDS Lunabotics - Electrical - Srivibhu Yerneni</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Srivibhu Yerneni</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#resume" class="nav-link">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <div class="project-detail-content">
+                <div class="project-detail-image">
+                    <img src="assets/lunabotics-electrical.png" alt="SEDS Lunabotics - Electrical">
+                </div>
+                <div class="project-detail-text">
+                    <h1>SEDS Lunabotics - Electrical</h1>
+                    <p class="project-subtitle">I²C Power & Communication Hub</p>
+                    
+                    <h2>Overview</h2>
+                    <p>Designed a modular I²C communication and power distribution hub using a Raspberry Pi and TCA9548A multiplexer to support multiple downstream boards with address isolation and improved bus reliability.</p>
+                    
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><strong>Modular Design:</strong> I²C communication and power distribution hub</li>
+                        <li><strong>Raspberry Pi Integration:</strong> Central control using Raspberry Pi</li>
+                        <li><strong>TCA9548A Multiplexer:</strong> Address isolation for multiple devices</li>
+                        <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
+                        <li><strong>Configurable Power:</strong> Jumper-selectable 3.3V/5V power distribution for mixed-voltage peripherals</li>
+                        <li><strong>Bus Reliability:</strong> Configurable pull-ups, reset handling, and bus protection</li>
+                    </ul>
+                    
+                    <h2>Technical Details</h2>
+                    <ul>
+                        <li>Developed full schematic and PCB in KiCad</li>
+                        <li>Implemented configurable pull-ups and reset handling</li>
+                        <li>Designed for reliable multi-device I²C operation</li>
+                        <li>Enabled seamless hardware-software integration with ROS2 drivers and control nodes</li>
+                        <li>Validated board functionality through hardware bring-up, debugging, and system-level testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Srivibhu Yerneni. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/srivibhu-yerneni-030424280" target="_blank" class="social-link">LinkedIn</a>
+                <a href="mailto:yerneni.sr@northeastern.edu" class="social-link">yerneni.sr@northeastern.edu</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
