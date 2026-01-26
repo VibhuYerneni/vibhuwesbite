@@ -393,25 +393,140 @@ body {
     color: #0056b3;
 }
 
+.project-section {
+    margin-bottom: 6rem;
+}
+
+.project-section:last-child {
+    margin-bottom: 0;
+}
+
 .project-detail-content {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 3rem;
+    align-items: start;
+    justify-items: start;
 }
 
 .project-detail-image {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto 3rem;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 120px;
+    margin-left: 0;
+}
+
+.phone-frame-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.phone-frame {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    transform: scale(1.5);
+    transform-origin: center;
+}
+
+
+.phone-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 87%;
+    overflow: hidden; /* crops anything outside */
+    border-radius: 40px; /* rounded corners */
+    z-index: 1;
+    aspect-ratio: 9 / 19.5; /* iPhone-ish */
+    transform: translate(-49.75%, -49.25%) scale(0.6425);
+    transform-origin: center center;
+}
+
+.carousel-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: none;
+}
+
+.carousel-image {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* removes the white padding by zooming/cropping */
+    object-position: center center; /* keep centered */
+    display: block;
+    flex-shrink: 0;
 }
 
 .project-detail-image img {
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+/* Diagram Images for Lunabotics */
+.diagram-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.diagram-image:last-child {
+    margin-bottom: 0;
+}
+
+/* ECG Page - Images to the right of text */
+.project-detail-content-ecg {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 3rem;
+    align-items: start;
+    justify-items: start;
+}
+
+.project-detail-image-ecg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: sticky;
+    top: 120px;
+}
+
+.diagram-image-ecg {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.diagram-image-ecg:last-child {
+    margin-bottom: 0;
 }
 
 .project-detail-text h1 {
@@ -434,6 +549,18 @@ body {
     color: var(--primary-color);
     margin-top: 2.5rem;
     margin-bottom: 1rem;
+}
+
+.project-detail-text h2:first-child {
+    margin-top: 0;
+}
+
+.project-detail-text h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
 }
 
 .project-detail-text p {
@@ -533,8 +660,14 @@ body {
         font-size: 1.5rem;
     }
 
+    .project-detail-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
     .project-detail-image {
         max-width: 100%;
+        position: static;
     }
 }
 

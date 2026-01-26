@@ -28,35 +28,71 @@
     <section class="project-detail">
         <div class="container">
             <a href="index.html#projects" class="back-link">← Back to Projects</a>
-            <div class="project-detail-content">
-                <div class="project-detail-image">
-                    <img src="assets/lunabotics-electrical.png" alt="SEDS Lunabotics - Electrical">
+            <h1 style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 3rem; text-align: center;">SEDS Lunabotics - Electrical</h1>
+            
+            <!-- I²C Power & Communication Hub Section -->
+            <div class="project-section">
+                <div class="project-detail-content">
+                    <div class="project-detail-text">
+                        <h2>I²C Power & Communication Hub</h2>
+                        
+                        <h3>Overview</h3>
+                        <p>Designed a modular I²C communication and power distribution hub using a Raspberry Pi and TCA9548A multiplexer to support multiple downstream boards with address isolation and improved bus reliability.</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>Modular Design:</strong> I²C communication and power distribution hub</li>
+                            <li><strong>Raspberry Pi Integration:</strong> Central control using Raspberry Pi</li>
+                            <li><strong>TCA9548A Multiplexer:</strong> Address isolation for multiple devices</li>
+                            <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
+                            <li><strong>Configurable Power:</strong> Jumper-selectable 3.3V/5V power distribution for mixed-voltage peripherals</li>
+                            <li><strong>Bus Reliability:</strong> Configurable pull-ups, reset handling, and bus protection</li>
+                        </ul>
+                        
+                        <h3>Technical Details</h3>
+                        <ul>
+                            <li>Developed full schematic and PCB in KiCad</li>
+                            <li>Implemented configurable pull-ups and reset handling</li>
+                            <li>Designed for reliable multi-device I²C operation</li>
+                            <li>Enabled seamless hardware-software integration with ROS2 drivers and control nodes</li>
+                            <li>Validated board functionality through hardware bring-up, debugging, and system-level testing</li>
+                        </ul>
+                    </div>
+                    <div class="project-detail-image">
+                        <img src="assets/lunabotics-i2c-schematic.png" alt="I²C Power & Communication Hub Schematic" class="diagram-image">
+                    </div>
                 </div>
-                <div class="project-detail-text">
-                    <h1>SEDS Lunabotics - Electrical</h1>
-                    <p class="project-subtitle">I²C Power & Communication Hub</p>
-                    
-                    <h2>Overview</h2>
-                    <p>Designed a modular I²C communication and power distribution hub using a Raspberry Pi and TCA9548A multiplexer to support multiple downstream boards with address isolation and improved bus reliability.</p>
-                    
-                    <h2>Key Features</h2>
-                    <ul>
-                        <li><strong>Modular Design:</strong> I²C communication and power distribution hub</li>
-                        <li><strong>Raspberry Pi Integration:</strong> Central control using Raspberry Pi</li>
-                        <li><strong>TCA9548A Multiplexer:</strong> Address isolation for multiple devices</li>
-                        <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
-                        <li><strong>Configurable Power:</strong> Jumper-selectable 3.3V/5V power distribution for mixed-voltage peripherals</li>
-                        <li><strong>Bus Reliability:</strong> Configurable pull-ups, reset handling, and bus protection</li>
-                    </ul>
-                    
-                    <h2>Technical Details</h2>
-                    <ul>
-                        <li>Developed full schematic and PCB in KiCad</li>
-                        <li>Implemented configurable pull-ups and reset handling</li>
-                        <li>Designed for reliable multi-device I²C operation</li>
-                        <li>Enabled seamless hardware-software integration with ROS2 drivers and control nodes</li>
-                        <li>Validated board functionality through hardware bring-up, debugging, and system-level testing</li>
-                    </ul>
+            </div>
+            
+            <!-- Beacon Board Section -->
+            <div class="project-section">
+                <div class="project-detail-content">
+                    <div class="project-detail-text">
+                        <h2>Beacon Board</h2>
+                        
+                        <h3>Overview</h3>
+                        <p>The beacon board is a board we will be using for our 3 external UWB beacons to communicate to the 4 UWB beacons on the corners of our robot for triangulation of our robot (to see where our robot is on the field).</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>UWB Communication:</strong> Enables communication between 3 external UWB beacons and 4 UWB beacons on robot corners</li>
+                            <li><strong>Triangulation System:</strong> Provides robot position tracking on the field through UWB beacon triangulation</li>
+                            <li><strong>Microcontroller Control:</strong> Basic microcontroller circuit controlling the UWB beacons</li>
+                            <li><strong>Battery Rechargeable:</strong> LiPo battery powered with recharge capability instead of disposable AA batteries</li>
+                            <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout design</li>
+                        </ul>
+                        
+                        <h3>Technical Details</h3>
+                        <ul>
+                            <li>Designed for UWB beacon communication and triangulation</li>
+                            <li>Integrated LiPo battery charging circuit</li>
+                            <li>Microcontroller-based control system for beacon management</li>
+                            <li>Power management system for efficient battery usage</li>
+                        </ul>
+                    </div>
+                    <div class="project-detail-image">
+                        <img src="assets/lunabotics-beacon-board.png" alt="Beacon Board PCB" class="diagram-image">
+                    </div>
                 </div>
             </div>
         </div>

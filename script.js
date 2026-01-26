@@ -68,3 +68,68 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 // Project links now navigate to individual project pages
 // No need to prevent default behavior
+
+// Phone Frame Carousel - Auto-switch every 2 seconds (No Animation)
+(function() {
+    const carouselTrack = document.getElementById('carouselTrack');
+    
+    if (!carouselTrack) return;
+    
+    const images = carouselTrack.querySelectorAll('.carousel-image');
+    if (images.length === 0) return;
+    
+    let currentIndex = 0;
+    let autoSwitchInterval = null;
+    let isPaused = false;
+    
+    // Update carousel position - no transition for instant switch
+    function updateCarousel() {
+        carouselTrack.style.transition = 'none';
+        const translateX = -currentIndex * 100;
+        carouselTrack.style.transform = `translateX(${translateX}%)`;
+    }
+    
+    // Switch to next image
+    function switchToNext() {
+        if (isPaused) return;
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+    }
+    
+    // Auto-switch every 2 seconds
+    function startAutoSwitch() {
+        if (autoSwitchInterval) {
+            clearInterval(autoSwitchInterval);
+        }
+        isPaused = false;
+        autoSwitchInterval = setInterval(switchToNext, 2000);
+    }
+    
+    // Stop auto-switch on hover
+    const phoneScreen = document.querySelector('.phone-screen');
+    if (phoneScreen) {
+        phoneScreen.addEventListener('mouseenter', () => {
+            isPaused = true;
+            if (autoSwitchInterval) {
+                clearInterval(autoSwitchInterval);
+                autoSwitchInterval = null;
+            }
+        });
+        phoneScreen.addEventListener('mouseleave', () => {
+            isPaused = false;
+            startAutoSwitch();
+        });
+    }
+    
+    // Initialize
+    updateCarousel();
+    startAutoSwitch();
+    
+    // Ensure it keeps running even if something interrupts it
+    setInterval(() => {
+        if (!isPaused && !autoSwitchInterval) {
+            startAutoSwitch();
+        }
+    }, 1000);
+})();
+
