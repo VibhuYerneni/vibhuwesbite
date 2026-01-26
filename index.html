@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srivibhu Yerneni - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Srivibhu Yerneni</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-image-container">
+                <img src="assets/profile.png" alt="Srivibhu Yerneni" class="hero-image">
+            </div>
+            <div class="hero-text">
+                <h1>I'm Srivibhu Yerneni, an Electrical and Computer Engineer.</h1>
+                <p>I am currently a student at Northeastern University working towards making innovative technological solutions through embedded systems, machine learning, and hardware design.</p>
+                <p class="scroll-text">Scroll below to see my projects and work!</p>
+                <div class="hero-links">
+                    <a href="https://www.linkedin.com/in/srivibhu-yerneni" target="_blank" class="btn btn-primary">LinkedIn</a>
+                    <a href="#projects" class="btn btn-secondary">Projects</a>
+                    <a href="#resume" class="btn btn-secondary">Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">TradeSafe</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>TradeSafe</h3>
+                        <p>AI-powered mobile application for automated risk management, intelligent stop-loss & profit-taking system with Schwab API integration and real-time market data.</p>
+                        <a href="#trade-safe" class="project-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">ROS2 Architecture</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ROS2 Architecture</h3>
+                        <p>Designed modular ROS2 architecture for autonomous Lunabotics rover, implementing distributed nodes for perception, navigation, and control. Contributed to 3rd place finish nationally.</p>
+                        <a href="#ros2" class="project-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">I²C Communication Hub</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>I²C Power & Communication Hub</h3>
+                        <p>Designed modular I²C communication and power distribution hub using Raspberry Pi and TCA9548A multiplexer with full schematic and PCB design in KiCad.</p>
+                        <a href="#i2c" class="project-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">ECG Signal Processing</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ECG Signal Processing</h3>
+                        <p>Acquired and processed raw ECG signals using surface electrodes and analog front-end circuitry with signal conditioning, amplification, and real-time visualization.</p>
+                        <a href="#ecg" class="project-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Tanks in Java</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tanks in Java</h3>
+                        <p>Developed a Java-based tank battle game featuring real-time movement, shooting mechanics, collision detection, and enemy AI with object-oriented architecture.</p>
+                        <a href="#tanks" class="project-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Thunderstruck</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Thunderstruck</h3>
+                        <p>Built an Arduino-based interactive puzzle with physical game pieces and real-time Python GUI, integrating photoresistor sensors with serial communication.</p>
+                        <a href="#thunderstruck" class="project-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-content">
+                <p>Click the button below to view or download my resume.</p>
+                <a href="resume.pdf" target="_blank" class="btn btn-primary">View Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Srivibhu Yerneni. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/srivibhu-yerneni" target="_blank" class="social-link">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
