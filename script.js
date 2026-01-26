@@ -66,14 +66,5 @@ document.querySelectorAll('.project-card').forEach(card => {
     observer.observe(card);
 });
 
-// Project link handlers (can be expanded later)
-document.querySelectorAll('.project-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        // For now, just scroll to top or show alert
-        // This can be expanded to show project details in a modal
-        const projectName = this.closest('.project-card').querySelector('h3').textContent;
-        console.log(`Viewing details for: ${projectName}`);
-        // You can add modal functionality here later
-    });
-});
+// Project links now navigate to individual project pages
+// No need to prevent default behavior
