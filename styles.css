@@ -477,7 +477,7 @@ body.page-loaded .hero {
 /* Chip with branching wires */
 .chip-wires {
     position: relative;
-    width: min(420px, 80vw);
+    width: min(520px, 90vw);
     aspect-ratio: 1 / 1;
     margin: 0 auto;
 }
@@ -486,7 +486,7 @@ body.page-loaded .hero {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 42%;
+    width: 60%;
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -542,72 +542,72 @@ body.page-loaded .hero {
 
 /* Individual wire angles and lengths */
 .wire-1 {
-    transform: translate(-50%, -50%) rotate(-35deg);
+    transform: translate(-50%, -50%) rotate(0deg);
 }
 
 .wire-2 {
-    transform: translate(-50%, -50%) rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .wire-3 {
-    transform: translate(-50%, -50%) rotate(25deg);
+    transform: translate(-50%, -50%) rotate(180deg);
 }
 
 .wire-4 {
-    transform: translate(-50%, -50%) rotate(160deg);
+    transform: translate(-50%, -50%) rotate(270deg);
 }
 
 .wire-5 {
-    transform: translate(-50%, -50%) rotate(205deg);
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
 /* Active state when section scrolls into view */
 .chip-wires.active .wire-1::before {
-    width: 150px;
+    width: 170px;
 }
 
 .chip-wires.active .wire-2::before {
-    width: 165px;
+    width: 170px;
 }
 
 .chip-wires.active .wire-3::before {
-    width: 150px;
+    width: 170px;
 }
 
 .chip-wires.active .wire-4::before {
-    width: 165px;
+    width: 170px;
 }
 
 .chip-wires.active .wire-5::before {
-    width: 145px;
+    width: 190px;
 }
 
 .chip-wires.active .wire-1 .skill-node {
-    transform: translate(150px, -50%);
+    transform: translate(170px, -50%);
     opacity: 1;
     transition-delay: 0.1s;
 }
 
 .chip-wires.active .wire-2 .skill-node {
-    transform: translate(165px, -50%);
+    transform: translate(170px, -50%);
     opacity: 1;
     transition-delay: 0.25s;
 }
 
 .chip-wires.active .wire-3 .skill-node {
-    transform: translate(150px, -50%);
+    transform: translate(170px, -50%);
     opacity: 1;
     transition-delay: 0.4s;
 }
 
 .chip-wires.active .wire-4 .skill-node {
-    transform: translate(165px, -50%);
+    transform: translate(170px, -50%);
     opacity: 1;
     transition-delay: 0.55s;
 }
 
 .chip-wires.active .wire-5 .skill-node {
-    transform: translate(145px, -50%);
+    transform: translate(190px, -50%);
     opacity: 1;
     transition-delay: 0.7s;
 }
