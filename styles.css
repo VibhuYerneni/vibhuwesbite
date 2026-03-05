@@ -478,6 +478,7 @@ body.page-loaded .hero {
     width: min(520px, 90vw);
     aspect-ratio: 1 / 1;
     margin: 0 auto;
+    transform: translateX(40px);
 }
 
 .chip-core {
