@@ -53,17 +53,48 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            if (entry.target.classList.contains('animate-translate')) {
+                entry.target.style.transform = 'translateY(0)';
+            }
         }
     });
 }, observerOptions);
 
 // Observe project cards
 document.querySelectorAll('.project-card').forEach(card => {
+    card.classList.add('animate-translate');
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(card);
+});
+
+// Observe Skill Orbit section content
+const skillsText = document.querySelector('.skills-text');
+const skillOrbit = document.querySelector('.skill-orbit');
+
+if (skillsText) {
+    skillsText.classList.add('animate-translate');
+    skillsText.style.opacity = '0';
+    skillsText.style.transform = 'translateY(30px)';
+    skillsText.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(skillsText);
+}
+
+if (skillOrbit) {
+    skillOrbit.classList.add('animate-translate');
+    skillOrbit.style.opacity = '0';
+    skillOrbit.style.transform = 'translateY(30px)';
+    skillOrbit.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(skillOrbit);
+}
+
+// Reveal orbit items progressively on scroll (fade only)
+document.querySelectorAll('.orbit-item').forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transition = 'opacity 0.7s ease';
+    item.style.transitionDelay = `${index * 0.08}s`;
+    observer.observe(item);
 });
 
 // Project links now navigate to individual project pages
