@@ -460,6 +460,16 @@ body {
     z-index: 1;
 }
 
+/* Keep labels upright while orbit spins */
+.orbit-item span {
+    animation: orbit-counter-rotate 26s linear infinite;
+    transform-origin: center;
+}
+
+.skill-orbit:hover .orbit-item span {
+    animation-play-state: paused;
+}
+
 /* Positions around the ring */
 .orbit-item-1 {
     top: -4%;
@@ -515,6 +525,15 @@ body {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit-counter-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
     }
 }
 
