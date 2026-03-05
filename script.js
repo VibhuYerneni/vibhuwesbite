@@ -63,6 +63,11 @@ const observer = new IntersectionObserver((entries) => {
             if (entry.target.classList.contains('animate-translate')) {
                 entry.target.style.transform = 'translateY(0)';
             }
+
+            // Explode chip stack when it enters view
+            if (entry.target.classList.contains('chip-stack')) {
+                entry.target.classList.add('exploded');
+            }
         }
     });
 }, observerOptions);
