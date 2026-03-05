@@ -64,9 +64,9 @@ const observer = new IntersectionObserver((entries) => {
                 entry.target.style.transform = 'translateY(0)';
             }
 
-            // Explode chip stack when it enters view
-            if (entry.target.classList.contains('chip-stack')) {
-                entry.target.classList.add('exploded');
+            // Activate chip wires animation when it enters view
+            if (entry.target.classList.contains('chip-wires')) {
+                entry.target.classList.add('active');
             }
         }
     });
@@ -83,7 +83,7 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 // Observe skills section content
 const skillsText = document.querySelector('.skills-text');
-const chipStack = document.querySelector('.chip-stack');
+const chipWires = document.querySelector('.chip-wires');
 
 if (skillsText) {
     skillsText.classList.add('animate-translate');
@@ -93,12 +93,12 @@ if (skillsText) {
     observer.observe(skillsText);
 }
 
-if (chipStack) {
-    chipStack.classList.add('animate-translate');
-    chipStack.style.opacity = '0';
-    chipStack.style.transform = 'translateY(30px)';
-    chipStack.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(chipStack);
+if (chipWires) {
+    chipWires.classList.add('animate-translate');
+    chipWires.style.opacity = '0';
+    chipWires.style.transform = 'translateY(30px)';
+    chipWires.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(chipWires);
 }
 
 // Project links now navigate to individual project pages

@@ -475,6 +475,144 @@ body.page-loaded .hero {
     animation-play-state: paused;
 }
 
+/* Chip with branching wires */
+.chip-wires {
+    position: relative;
+    width: min(420px, 80vw);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+}
+
+.chip-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 42%;
+    aspect-ratio: 1 / 1;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.chip-core img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 35px rgba(0, 0, 0, 0.6));
+}
+
+.wire {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: left center;
+}
+
+.wire::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, rgba(74, 158, 255, 0.9), rgba(74, 158, 255, 0));
+    box-shadow: 0 0 12px rgba(74, 158, 255, 0.9);
+    transition: width 0.7s ease;
+}
+
+.skill-node {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(74, 158, 255, 0.7);
+    background: rgba(10, 10, 26, 0.98);
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    transform: translate(0, -50%) translateX(0);
+    opacity: 0;
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.8),
+        0 0 14px rgba(74, 158, 255, 0.35);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+/* Individual wire angles and lengths */
+.wire-1 {
+    transform: translate(-50%, -50%) rotate(-35deg);
+}
+
+.wire-2 {
+    transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+.wire-3 {
+    transform: translate(-50%, -50%) rotate(25deg);
+}
+
+.wire-4 {
+    transform: translate(-50%, -50%) rotate(160deg);
+}
+
+.wire-5 {
+    transform: translate(-50%, -50%) rotate(205deg);
+}
+
+/* Active state when section scrolls into view */
+.chip-wires.active .wire-1::before {
+    width: 150px;
+}
+
+.chip-wires.active .wire-2::before {
+    width: 165px;
+}
+
+.chip-wires.active .wire-3::before {
+    width: 150px;
+}
+
+.chip-wires.active .wire-4::before {
+    width: 165px;
+}
+
+.chip-wires.active .wire-5::before {
+    width: 145px;
+}
+
+.chip-wires.active .wire-1 .skill-node {
+    transform: translate(150px, -50%);
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.chip-wires.active .wire-2 .skill-node {
+    transform: translate(165px, -50%);
+    opacity: 1;
+    transition-delay: 0.25s;
+}
+
+.chip-wires.active .wire-3 .skill-node {
+    transform: translate(150px, -50%);
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+.chip-wires.active .wire-4 .skill-node {
+    transform: translate(165px, -50%);
+    opacity: 1;
+    transition-delay: 0.55s;
+}
+
+.chip-wires.active .wire-5 .skill-node {
+    transform: translate(145px, -50%);
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
 .skill-orbit {
     position: relative;
     width: min(420px, 80vw);
