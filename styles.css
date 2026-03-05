@@ -541,14 +541,14 @@ body.page-loaded .hero {
     left: 0;
     top: 0;
     width: 0;
-    height: 4px;
+    height: 8px;
 }
 
 .wire-1::after {
     /* short vertical drop before label */
     left: 110px;
     top: 0;
-    width: 4px;
+    width: 8px;
     height: 0;
 }
 
@@ -579,14 +579,14 @@ body.page-loaded .hero {
     top: 0;
     left: 0;
     width: 0;
-    height: 4px;
+    height: 8px;
 }
 
 .wire-2::after {
     /* vertical segment down */
     top: 0;
     left: 90px;
-    width: 4px;
+    width: 8px;
     height: 0;
 }
 
@@ -617,7 +617,7 @@ body.page-loaded .hero {
     /* vertical segment down */
     top: 0;
     left: 0;
-    width: 4px;
+    width: 8px;
     height: 0;
 }
 
@@ -626,7 +626,7 @@ body.page-loaded .hero {
     top: 40px;
     left: -120px;
     width: 0;
-    height: 4px;
+    height: 8px;
 }
 
 .chip-wires.active .wire-3::before {
@@ -656,14 +656,14 @@ body.page-loaded .hero {
     top: 0;
     left: -90px;
     width: 0;
-    height: 4px;
+    height: 8px;
 }
 
 .wire-4::after {
     /* vertical segment up */
     top: -60px;
     left: -90px;
-    width: 4px;
+    width: 8px;
     height: 0;
 }
 
@@ -694,13 +694,13 @@ body.page-loaded .hero {
     top: 0;
     left: 0;
     width: 0;
-    height: 4px;
+    height: 8px;
 }
 
 .wire-5::after {
     top: -60px;
     left: 70px;
-    width: 4px;
+    width: 8px;
     height: 0;
 }
 
