@@ -341,9 +341,7 @@ body.page-loaded .hero {
 /* Skill Orbit Section */
 .skills {
     padding: 100px 20px;
-    background:
-        radial-gradient(circle at top, rgba(74, 158, 255, 0.18), transparent 55%),
-        var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 .skills-layout {
@@ -507,8 +505,8 @@ body.page-loaded .hero {
 .wire::after {
     content: '';
     position: absolute;
-    background: rgba(74, 158, 255, 0.95);
-    box-shadow: 0 0 10px rgba(74, 158, 255, 0.7);
+    background: rgba(74, 158, 255, 1);
+    box-shadow: 0 0 12px rgba(74, 158, 255, 0.9);
     border-radius: 999px;
     transition: width 0.45s ease-out, height 0.45s ease-out;
 }
