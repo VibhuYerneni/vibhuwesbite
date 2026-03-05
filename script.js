@@ -100,6 +100,69 @@ if (skillsGraphic) {
     observer.observe(skillsGraphic);
 }
 
+// Skills video: play only when user scrolls DOWN to the section; lock view for first 5 seconds
+(function () {
+    const section = document.getElementById('skills');
+    const video = section && section.querySelector('video');
+    if (!section || !video) return;
+
+    let isLocked = false;
+    let unlockTimeout = null;
+    let placeholder = null;
+    let hasUserScrolled = false;
+
+    window.addEventListener('scroll', () => { hasUserScrolled = true; }, { passive: true });
+
+    const skillsObserver = new IntersectionObserver(
+        (entries) => {
+            for (const entry of entries) {
+                if (entry.target !== section) continue;
+                const ratio = entry.intersectionRatio;
+                // Only start when user has scrolled down to the section (not on load)
+                if (ratio >= 0.35 && !isLocked && hasUserScrolled) {
+                    lock();
+                } else if (ratio === 0 && !isLocked) {
+                    video.pause();
+                }
+            }
+        },
+        { threshold: [0, 0.35] }
+    );
+
+    function lock() {
+        isLocked = true;
+        const height = section.offsetHeight;
+        placeholder = document.createElement('div');
+        placeholder.className = 'skills-lock-placeholder';
+        placeholder.style.height = height + 'px';
+        placeholder.setAttribute('aria-hidden', 'true');
+        section.parentNode.insertBefore(placeholder, section);
+
+        document.body.classList.add('scroll-locked');
+        section.classList.add('is-locked');
+        video.play().catch(() => {});
+
+        unlockTimeout = setTimeout(unlock, 5000);
+    }
+
+    function unlock() {
+        if (unlockTimeout) {
+            clearTimeout(unlockTimeout);
+            unlockTimeout = null;
+        }
+        section.classList.remove('is-locked');
+        if (placeholder && placeholder.parentNode) {
+            placeholder.parentNode.removeChild(placeholder);
+        }
+        placeholder = null;
+        document.body.classList.remove('scroll-locked');
+        isLocked = false;
+        section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    skillsObserver.observe(section);
+})();
+
 // Project links now navigate to individual project pages
 // No need to prevent default behavior
 
