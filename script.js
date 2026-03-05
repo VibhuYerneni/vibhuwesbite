@@ -6,6 +6,19 @@ const navLinks = document.querySelectorAll('.nav-link');
 // Initial page load animation
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('page-loaded');
+
+    // Auto-play chip wires animation after page load (no scroll needed)
+    const chipWires = document.querySelector('.chip-wires');
+    if (chipWires) {
+        // Ensure the chip graphic itself is visible
+        chipWires.style.opacity = '1';
+        chipWires.style.transform = 'translateY(0)';
+
+        // Slight delay so the chip appears, then branches extend
+        setTimeout(() => {
+            chipWires.classList.add('active');
+        }, 400);
+    }
 });
 
 navToggle.addEventListener('click', () => {
@@ -63,28 +76,6 @@ const observer = new IntersectionObserver((entries) => {
             if (entry.target.classList.contains('animate-translate')) {
                 entry.target.style.transform = 'translateY(0)';
             }
-
-            // Activate chip wires animation when it enters view
-            if (entry.target.classList.contains('chip-wires') && !entry.target.dataset.activated) {
-                entry.target.dataset.activated = 'true';
-
-                const activateWires = () => {
-                    // Small delay so the chip itself finishes sliding in first
-                    setTimeout(() => {
-                        entry.target.classList.add('active');
-                    }, 200);
-                };
-
-                if (window.scrollY === 0) {
-                    const onFirstScroll = () => {
-                        window.removeEventListener('scroll', onFirstScroll);
-                        activateWires();
-                    };
-                    window.addEventListener('scroll', onFirstScroll);
-                } else {
-                    activateWires();
-                }
-            }
         }
     });
 }, observerOptions);
@@ -98,9 +89,8 @@ document.querySelectorAll('.project-card').forEach(card => {
     observer.observe(card);
 });
 
-// Observe skills section content
+// Observe skills section text content (chip animation now runs on page load)
 const skillsText = document.querySelector('.skills-text');
-const chipWires = document.querySelector('.chip-wires');
 
 if (skillsText) {
     skillsText.classList.add('animate-translate');
@@ -108,14 +98,6 @@ if (skillsText) {
     skillsText.style.transform = 'translateY(30px)';
     skillsText.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(skillsText);
-}
-
-if (chipWires) {
-    chipWires.classList.add('animate-translate');
-    chipWires.style.opacity = '0';
-    chipWires.style.transform = 'translateY(30px)';
-    chipWires.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(chipWires);
 }
 
 // Project links now navigate to individual project pages
