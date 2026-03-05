@@ -378,6 +378,20 @@ body.page-loaded .hero {
     font-weight: 600;
 }
 
+.skills-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-video video {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    display: block;
+}
+
 /* Chip Design Stack */
 .chip-stack {
     display: flex;
