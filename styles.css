@@ -507,10 +507,10 @@ body.page-loaded .hero {
 .wire::after {
     content: '';
     position: absolute;
-    background: linear-gradient(90deg, rgba(74, 158, 255, 0.95), rgba(74, 158, 255, 0.3));
-    box-shadow: 0 0 10px rgba(74, 158, 255, 0.9);
+    background: rgba(74, 158, 255, 0.95);
+    box-shadow: 0 0 10px rgba(74, 158, 255, 0.7);
     border-radius: 999px;
-    transition: width 0.6s ease, height 0.6s ease;
+    transition: width 0.45s ease-out, height 0.45s ease-out;
 }
 
 .skill-node {
@@ -534,7 +534,7 @@ body.page-loaded .hero {
 
 /* Wire 1: top edge, up then right */
 .wire-1 {
-    top: 12%;
+    top: 20%;
     left: 50%;
 }
 
@@ -555,16 +555,16 @@ body.page-loaded .hero {
 }
 
 .chip-wires.active .wire-1::before {
-    height: 40px;
+    height: 28px;
 }
 
 .chip-wires.active .wire-1::after {
-    width: 120px;
+    width: 110px;
 }
 
 .chip-wires.active .wire-1 .skill-node {
-    top: 40px;
-    left: 120px;
+    top: 28px;
+    left: 110px;
     opacity: 1;
     transform: translateY(-50%) translateX(0);
     transition-delay: 0.2s;
@@ -573,7 +573,7 @@ body.page-loaded .hero {
 /* Wire 2: right edge, right then down */
 .wire-2 {
     top: 50%;
-    left: 88%;
+    left: 80%;
 }
 
 .wire-2::before {
@@ -591,17 +591,17 @@ body.page-loaded .hero {
 }
 
 .chip-wires.active .wire-2::before {
-    width: 60px;
+    width: 70px;
 }
 
 .chip-wires.active .wire-2::after {
-    top: 60px;
-    height: 60px;
+    top: 70px;
+    height: 70px;
 }
 
 .chip-wires.active .wire-2 .skill-node {
-    top: 60px;
-    left: 60px;
+    top: 70px;
+    left: 70px;
     opacity: 1;
     transform: translateY(-50%) translateX(0);
     transition-delay: 0.35s;
@@ -609,7 +609,7 @@ body.page-loaded .hero {
 
 /* Wire 3: bottom edge, down then left */
 .wire-3 {
-    top: 86%;
+    top: 80%;
     left: 50%;
 }
 
@@ -628,16 +628,16 @@ body.page-loaded .hero {
 }
 
 .chip-wires.active .wire-3::before {
-    height: 40px;
+    height: 28px;
 }
 
 .chip-wires.active .wire-3::after {
-    width: 120px;
+    width: 110px;
 }
 
 .chip-wires.active .wire-3 .skill-node {
-    top: 40px;
-    left: -120px;
+    top: 28px;
+    left: -110px;
     opacity: 1;
     transform: translateY(-50%) translateX(0);
     transition-delay: 0.5s;
@@ -646,7 +646,7 @@ body.page-loaded .hero {
 /* Wire 4: left edge, left then up */
 .wire-4 {
     top: 50%;
-    left: 12%;
+    left: 20%;
 }
 
 .wire-4::before {
@@ -664,16 +664,16 @@ body.page-loaded .hero {
 }
 
 .chip-wires.active .wire-4::before {
-    width: 60px;
+    width: 70px;
 }
 
 .chip-wires.active .wire-4::after {
-    height: 60px;
+    height: 70px;
 }
 
 .chip-wires.active .wire-4 .skill-node {
-    top: -60px;
-    left: -60px;
+    top: -70px;
+    left: -70px;
     opacity: 1;
     transform: translateY(-50%) translateX(0);
     transition-delay: 0.65s;
@@ -681,8 +681,8 @@ body.page-loaded .hero {
 
 /* Wire 5: diagonal from top-right corner */
 .wire-5 {
-    top: 20%;
-    left: 82%;
+    top: 26%;
+    left: 78%;
 }
 
 .wire-5::before {
@@ -700,16 +700,16 @@ body.page-loaded .hero {
 }
 
 .chip-wires.active .wire-5::before {
-    width: 80px;
+    width: 70px;
 }
 
 .chip-wires.active .wire-5::after {
-    height: 80px;
+    height: 70px;
 }
 
 .chip-wires.active .wire-5 .skill-node {
-    top: 80px;
-    left: 80px;
+    top: 70px;
+    left: 70px;
     opacity: 1;
     transform: translateY(-50%) translateX(0);
     transition-delay: 0.8s;
