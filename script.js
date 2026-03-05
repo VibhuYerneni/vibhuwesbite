@@ -65,8 +65,25 @@ const observer = new IntersectionObserver((entries) => {
             }
 
             // Activate chip wires animation when it enters view
-            if (entry.target.classList.contains('chip-wires')) {
-                entry.target.classList.add('active');
+            if (entry.target.classList.contains('chip-wires') && !entry.target.dataset.activated) {
+                entry.target.dataset.activated = 'true';
+
+                const activateWires = () => {
+                    // Small delay so the chip itself finishes sliding in first
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, 200);
+                };
+
+                if (window.scrollY === 0) {
+                    const onFirstScroll = () => {
+                        window.removeEventListener('scroll', onFirstScroll);
+                        activateWires();
+                    };
+                    window.addEventListener('scroll', onFirstScroll);
+                } else {
+                    activateWires();
+                }
             }
         }
     });
