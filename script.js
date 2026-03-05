@@ -69,9 +69,9 @@ document.querySelectorAll('.project-card').forEach(card => {
     observer.observe(card);
 });
 
-// Observe Skill Orbit section content
+// Observe skills section content
 const skillsText = document.querySelector('.skills-text');
-const skillOrbit = document.querySelector('.skill-orbit');
+const chipStack = document.querySelector('.chip-stack');
 
 if (skillsText) {
     skillsText.classList.add('animate-translate');
@@ -81,21 +81,13 @@ if (skillsText) {
     observer.observe(skillsText);
 }
 
-if (skillOrbit) {
-    skillOrbit.classList.add('animate-translate');
-    skillOrbit.style.opacity = '0';
-    skillOrbit.style.transform = 'translateY(30px)';
-    skillOrbit.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(skillOrbit);
+if (chipStack) {
+    chipStack.classList.add('animate-translate');
+    chipStack.style.opacity = '0';
+    chipStack.style.transform = 'translateY(30px)';
+    chipStack.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(chipStack);
 }
-
-// Reveal orbit items progressively on scroll (fade only)
-document.querySelectorAll('.orbit-item').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transition = 'opacity 0.7s ease';
-    item.style.transitionDelay = `${index * 0.08}s`;
-    observer.observe(item);
-});
 
 // Project links now navigate to individual project pages
 // No need to prevent default behavior

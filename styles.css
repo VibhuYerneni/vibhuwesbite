@@ -367,6 +367,74 @@ body {
     font-weight: 600;
 }
 
+/* Chip Design Stack */
+.chip-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.chip-layer {
+    position: relative;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    background: radial-gradient(circle at top left, rgba(74, 158, 255, 0.25), rgba(10, 10, 26, 0.95));
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 18px 40px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.chip-layer::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+    opacity: 0.9;
+}
+
+.chip-layer-header {
+    position: relative;
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.9rem;
+}
+
+.chip-layer-body {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(74, 158, 255, 0.6);
+    background: rgba(10, 10, 26, 0.9);
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.7),
+        0 0 10px rgba(74, 158, 255, 0.25);
+    animation: floatY 5s ease-in-out infinite alternate;
+}
+
+.skill-tag:nth-child(2) { animation-duration: 5.4s; animation-delay: 0.2s; }
+.skill-tag:nth-child(3) { animation-duration: 6s; animation-delay: 0.4s; }
+.skill-tag:nth-child(4) { animation-duration: 5.6s; animation-delay: 0.6s; }
+.skill-tag:nth-child(5) { animation-duration: 6.2s; animation-delay: 0.8s; }
+.skill-tag:nth-child(6) { animation-duration: 5.8s; animation-delay: 1s; }
+.skill-tag:nth-child(7) { animation-duration: 6.4s; animation-delay: 1.2s; }
+
+.chip-stack:hover .skill-tag {
+    animation-play-state: paused;
+}
+
 .skill-orbit {
     position: relative;
     width: min(420px, 80vw);
