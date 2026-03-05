@@ -3,6 +3,11 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
+// Initial page load animation
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('page-loaded');
+});
+
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     navToggle.classList.toggle('active');
