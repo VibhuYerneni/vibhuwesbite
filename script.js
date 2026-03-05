@@ -89,15 +89,15 @@ document.querySelectorAll('.project-card').forEach(card => {
     observer.observe(card);
 });
 
-// Observe skills section text content (chip animation now runs on page load)
-const skillsText = document.querySelector('.skills-text');
+// Observe skills section graphic (fade-in on scroll)
+const skillsGraphic = document.querySelector('.skills-graphic');
 
-if (skillsText) {
-    skillsText.classList.add('animate-translate');
-    skillsText.style.opacity = '0';
-    skillsText.style.transform = 'translateY(30px)';
-    skillsText.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(skillsText);
+if (skillsGraphic) {
+    skillsGraphic.classList.add('animate-translate');
+    skillsGraphic.style.opacity = '0';
+    skillsGraphic.style.transform = 'translateY(30px)';
+    skillsGraphic.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(skillsGraphic);
 }
 
 // Project links now navigate to individual project pages
