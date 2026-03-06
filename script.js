@@ -100,111 +100,34 @@ if (skillsGraphic) {
     observer.observe(skillsGraphic);
 }
 
-// ─── Scroll-locked video animation for skills section ────────────────────────
+// Skills video: simple play / pause based on section visibility (no scroll locking)
 (function () {
     const skillsSection = document.getElementById('skills');
     const video = skillsSection && skillsSection.querySelector('video');
     if (!skillsSection || !video) return;
 
-    const SCROLL_DISTANCE = 1000; // px of scrolling to scrub to RELEASE_TIME
-    const RELEASE_TIME = 8;       // seconds
-
-    let isLocked = false;
-    let accumulatedDelta = 0;
-    let hasPlayed = false;
-    let touchStartY = 0;
-    let previousOverflow = '';
-
-    // Wait for video metadata so we know its duration
+    // Start paused; only play when user scrolls to the section
     video.addEventListener('loadedmetadata', () => {
-        video.currentTime = 0;
         video.pause();
+        video.currentTime = 0;
     });
 
-    // Watch for skills section entering viewport
-    const sectionObserver = new IntersectionObserver(
-        ([entry]) => {
-            if (entry.isIntersecting && !hasPlayed) {
-                lockScroll();
+    const skillsObserver = new IntersectionObserver(
+        (entries) => {
+            for (const entry of entries) {
+                if (entry.target !== skillsSection) continue;
+                const ratio = entry.intersectionRatio;
+                if (ratio >= 0.35) {
+                    video.play().catch(() => {});
+                } else if (ratio === 0) {
+                    video.pause();
+                }
             }
         },
-        { threshold: 0.5 }
+        { threshold: [0, 0.35] }
     );
 
-    sectionObserver.observe(skillsSection);
-
-    function lockScroll() {
-        isLocked = true;
-        accumulatedDelta = 0;
-
-        // Snap the section so the chip sits even lower on screen and freeze scrolling
-        const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-        const targetTop = Math.min(
-            maxScroll,
-            skillsSection.offsetTop + window.innerHeight * 0.25
-        );
-        window.scrollTo(0, targetTop);
-        previousOverflow = document.body.style.overflow || '';
-        document.body.style.overflow = 'hidden';
-    }
-
-    function unlockScroll() {
-        if (!isLocked) return;
-        isLocked = false;
-        hasPlayed = true;
-
-        document.body.style.overflow = previousOverflow;
-        sectionObserver.unobserve(skillsSection);
-    }
-
-    // Wheel handler
-    window.addEventListener('wheel', (e) => {
-        if (!isLocked) return;
-        e.preventDefault();
-
-        accumulatedDelta += e.deltaY;
-        accumulatedDelta = Math.max(0, accumulatedDelta); // no rewinding
-
-        const progress = Math.min(accumulatedDelta / SCROLL_DISTANCE, 1);
-
-        if (video.duration) {
-            const targetTime = Math.min(progress * RELEASE_TIME, RELEASE_TIME, video.duration);
-            video.currentTime = targetTime;
-        }
-
-        if (progress >= 1) {
-            unlockScroll();
-        }
-    }, { passive: false });
-
-    // Touch support
-    window.addEventListener('touchstart', (e) => {
-        if (!isLocked) return;
-        touchStartY = e.touches[0].clientY;
-    }, { passive: true });
-
-    window.addEventListener('touchmove', (e) => {
-        if (!isLocked) return;
-        e.preventDefault();
-
-        const currentY = e.touches[0].clientY;
-        const dy = touchStartY - currentY;
-        touchStartY = currentY;
-
-        accumulatedDelta += dy;
-        accumulatedDelta = Math.max(0, accumulatedDelta);
-
-        const progress = Math.min(accumulatedDelta / SCROLL_DISTANCE, 1);
-
-        if (video.duration) {
-            const targetTime = Math.min(progress * RELEASE_TIME, RELEASE_TIME, video.duration);
-            video.currentTime = targetTime;
-        }
-
-        if (progress >= 1) {
-            unlockScroll();
-        }
-    }, { passive: false });
+    skillsObserver.observe(skillsSection);
 })();
 
 // Project links now navigate to individual project pages
