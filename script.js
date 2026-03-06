@@ -100,31 +100,106 @@ if (skillsGraphic) {
     observer.observe(skillsGraphic);
 }
 
-// Skills video: play when user scrolls down to the section, pause when they scroll away (no scroll lock)
+// ─── Scroll-locked video animation for skills section ────────────────────────
 (function () {
-    const section = document.getElementById('skills');
-    const video = section && section.querySelector('video');
-    if (!section || !video) return;
+    const skillsSection = document.getElementById('skills');
+    const video = skillsSection && skillsSection.querySelector('video');
+    if (!skillsSection || !video) return;
 
-    let hasUserScrolled = false;
-    window.addEventListener('scroll', () => { hasUserScrolled = true; }, { passive: true });
+    const SCROLL_DISTANCE = 1000; // px of scrolling to scrub to RELEASE_TIME
+    const RELEASE_TIME = 8;       // seconds
 
-    const skillsObserver = new IntersectionObserver(
-        (entries) => {
-            for (const entry of entries) {
-                if (entry.target !== section) continue;
-                const ratio = entry.intersectionRatio;
-                if (ratio >= 0.35 && hasUserScrolled) {
-                    video.play().catch(() => {});
-                } else if (ratio === 0) {
-                    video.pause();
-                }
+    let isLocked = false;
+    let accumulatedDelta = 0;
+    let hasPlayed = false;
+    let touchStartY = 0;
+    let previousOverflow = '';
+
+    // Wait for video metadata so we know its duration
+    video.addEventListener('loadedmetadata', () => {
+        video.currentTime = 0;
+        video.pause();
+    });
+
+    // Watch for skills section entering viewport
+    const sectionObserver = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting && !hasPlayed) {
+                lockScroll();
             }
         },
-        { threshold: [0, 0.35] }
+        { threshold: 0.5 }
     );
 
-    skillsObserver.observe(section);
+    sectionObserver.observe(skillsSection);
+
+    function lockScroll() {
+        isLocked = true;
+        accumulatedDelta = 0;
+
+        // Snap the section to the top of the viewport and freeze scrolling
+        window.scrollTo(0, skillsSection.offsetTop);
+        previousOverflow = document.body.style.overflow || '';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function unlockScroll() {
+        if (!isLocked) return;
+        isLocked = false;
+        hasPlayed = true;
+
+        document.body.style.overflow = previousOverflow;
+        sectionObserver.unobserve(skillsSection);
+    }
+
+    // Wheel handler
+    window.addEventListener('wheel', (e) => {
+        if (!isLocked) return;
+        e.preventDefault();
+
+        accumulatedDelta += e.deltaY;
+        accumulatedDelta = Math.max(0, accumulatedDelta); // no rewinding
+
+        const progress = Math.min(accumulatedDelta / SCROLL_DISTANCE, 1);
+
+        if (video.duration) {
+            const targetTime = Math.min(progress * RELEASE_TIME, RELEASE_TIME, video.duration);
+            video.currentTime = targetTime;
+        }
+
+        if (progress >= 1) {
+            unlockScroll();
+        }
+    }, { passive: false });
+
+    // Touch support
+    window.addEventListener('touchstart', (e) => {
+        if (!isLocked) return;
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+        if (!isLocked) return;
+        e.preventDefault();
+
+        const currentY = e.touches[0].clientY;
+        const dy = touchStartY - currentY;
+        touchStartY = currentY;
+
+        accumulatedDelta += dy;
+        accumulatedDelta = Math.max(0, accumulatedDelta);
+
+        const progress = Math.min(accumulatedDelta / SCROLL_DISTANCE, 1);
+
+        if (video.duration) {
+            const targetTime = Math.min(progress * RELEASE_TIME, RELEASE_TIME, video.duration);
+            video.currentTime = targetTime;
+        }
+
+        if (progress >= 1) {
+            unlockScroll();
+        }
+    }, { passive: false });
 })();
 
 // Project links now navigate to individual project pages
