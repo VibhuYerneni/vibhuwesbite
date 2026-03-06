@@ -353,8 +353,8 @@ body.page-loaded .hero {
 
 .skills-graphic video {
     width: 100%;
-    max-width: 760px;
-    min-height: 340px;
+    max-width: 900px;
+    min-height: 400px;
     display: block;
     background: #0A0A1A;
 }

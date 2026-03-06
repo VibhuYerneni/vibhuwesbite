@@ -137,8 +137,8 @@ if (skillsGraphic) {
         isLocked = true;
         accumulatedDelta = 0;
 
-        // Snap the section so the chip is vertically centered-ish and freeze scrolling
-        const targetTop = Math.max(0, skillsSection.offsetTop - window.innerHeight * 0.2);
+        // Snap the section so the chip is closer to vertical center and freeze scrolling
+        const targetTop = Math.max(0, skillsSection.offsetTop - window.innerHeight * 0.35);
         window.scrollTo(0, targetTop);
         previousOverflow = document.body.style.overflow || '';
         document.body.style.overflow = 'hidden';
