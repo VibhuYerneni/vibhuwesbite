@@ -54,28 +54,16 @@
 
             <div class="project-main-inner">
                 <div class="project-detail-body">
+                    <!-- I²C Power & Communication Hub -->
                     <div class="project-section">
                         <div class="project-detail-content">
                             <div class="project-detail-text">
                                 <h2>I²C Power & Communication Hub</h2>
-                                <h3>Overview</h3>
-                                <p>Designed a modular I²C communication and power distribution hub using a Raspberry Pi and TCA9548A multiplexer to support multiple downstream boards with address isolation and improved bus reliability.</p>
-                                <h3>Key Features</h3>
-                                <ul>
-                                    <li><strong>Modular Design:</strong> I²C communication and power distribution hub</li>
-                                    <li><strong>Raspberry Pi Integration:</strong> Central control using Raspberry Pi</li>
-                                    <li><strong>TCA9548A Multiplexer:</strong> Address isolation for multiple devices</li>
-                                    <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
-                                    <li><strong>Configurable Power:</strong> Jumper-selectable 3.3V/5V power distribution</li>
-                                    <li><strong>Bus Reliability:</strong> Configurable pull-ups, reset handling, and bus protection</li>
-                                </ul>
-                                <h3>Technical Details</h3>
-                                <ul>
-                                    <li>Developed full schematic and PCB in KiCad</li>
-                                    <li>Implemented configurable pull-ups and reset handling</li>
-                                    <li>Designed for reliable multi-device I²C operation</li>
-                                    <li>Enabled seamless hardware-software integration with ROS2 drivers and control nodes</li>
-                                </ul>
+                                <h3>Challenge</h3>
+                                <p>The rover needed reliable I²C connectivity from the Raspberry Pi to multiple downstream boards—sensors, motor drivers, and peripherals—without address conflicts or bus contention. A single shared bus would limit scalability and make debugging difficult when several devices shared the same protocol.</p>
+                                <p>I had to design a hub that provided address isolation, configurable power (3.3V/5V for different boards), and robust bus behavior (pull-ups, reset handling, protection) while fitting the mechanical and power budget of the rover.</p>
+                                <h3>Solution</h3>
+                                <p>I designed a modular I²C communication and power distribution hub in KiCad using a Raspberry Pi as the host and a TCA9548A multiplexer for address isolation. The hub supports multiple downstream boards on separate channels, jumper-selectable 3.3V/5V power, and configurable pull-ups and reset handling for bus reliability. Full schematic and PCB layout were completed in KiCad, enabling seamless integration with the team’s ROS2 drivers and control nodes.</p>
                             </div>
                             <div class="project-detail-image">
                                 <img src="assets/lunabotics-i2c-schematic.png" alt="I²C Power & Communication Hub Schematic" class="diagram-image">
@@ -83,23 +71,19 @@
                         </div>
                     </div>
 
+                    <!-- Beacon Board -->
                     <div class="project-section">
                         <div class="project-detail-content">
                             <div class="project-detail-text">
                                 <h2>Beacon Board</h2>
-                                <h3>Overview</h3>
-                                <p>The beacon board supports 3 external UWB beacons communicating with 4 UWB beacons on the robot corners for triangulation and robot position tracking on the field.</p>
-                                <h3>Key Features</h3>
-                                <ul>
-                                    <li><strong>UWB Communication:</strong> Communication between 3 external and 4 on-robot UWB beacons</li>
-                                    <li><strong>Triangulation System:</strong> Robot position tracking on the field</li>
-                                    <li><strong>Microcontroller Control:</strong> Circuit controlling the UWB beacons</li>
-                                    <li><strong>LiPo Battery:</strong> Rechargeable LiPo with charging circuit</li>
-                                    <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
-                                </ul>
+                                <h3>Challenge</h3>
+                                <p>The robot needed accurate position tracking on the competition field. The system uses 3 external UWB beacons and 4 on-robot UWB beacons for triangulation. I had to design a board that could power and control these beacons, run reliably in the field, and support recharging instead of disposable batteries.</p>
+                                <p>Requirements included a microcontroller for beacon control and communication, USB-C for programming and power, a rechargeable LiPo with charge management, and a power path that could switch between battery and USB without dropping the load.</p>
+                                <h3>Solution</h3>
+                                <p>I designed the Beacon Board around an STM32G0 microcontroller with dedicated BEACON1_NRST and BEACON1_MODE signals for UWB beacon control. Power is provided by an MCP73831 Li-Ion/Li-Poly charger, a TPS2116 power multiplexer (battery vs. USB-C), and an AP2112 3.3V LDO for the MCU. The board includes USB-C with ESD protection, a 32.768 kHz crystal for RTC/timing, and a UART header for debugging and external communication. Full schematic and PCB were done in KiCad; the board supports 3 external and 4 on-robot UWB beacons for rover triangulation on the field.</p>
                             </div>
                             <div class="project-detail-image">
-                                <img src="assets/lunabotics-beacon-board.png" alt="Beacon Board PCB" class="diagram-image">
+                                <img src="assets/lunabotics-beacon-board-schematic.png" alt="Beacon Board with Rechargeable Battery schematic" class="diagram-image">
                             </div>
                         </div>
                     </div>
