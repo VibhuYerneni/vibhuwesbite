@@ -7,6 +7,11 @@ const navLinks = document.querySelectorAll('.nav-link');
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('page-loaded');
 
+    // Project pages: quick fade-in for sidebar and main content
+    if (document.body.classList.contains('project-page')) {
+        requestAnimationFrame(() => document.body.classList.add('project-loaded'));
+    }
+
     // Auto-play chip wires animation after page load (no scroll needed)
     const chipWires = document.querySelector('.chip-wires');
     if (chipWires) {

@@ -1036,6 +1036,17 @@ body.project-page {
     padding: 0;
 }
 
+body.project-page .project-sidebar,
+body.project-page .project-main {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+body.project-page.project-loaded .project-sidebar,
+body.project-page.project-loaded .project-main {
+    opacity: 1;
+}
+
 .project-page .navbar {
     display: none;
 }
@@ -1260,6 +1271,93 @@ body.project-page {
 .project-meta-row .value {
     color: var(--primary-color);
     text-align: right;
+}
+
+/* Next project block at bottom of project pages */
+.next-project {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.next-project-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.next-project-link:hover {
+    opacity: 0.9;
+}
+
+.next-project-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 1.25rem;
+}
+
+.next-project-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.next-project-image {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+}
+
+.next-project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.next-project-text h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.next-project-text p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.next-project-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+@media (max-width: 991px) {
+    .next-project-content {
+        grid-template-columns: 1fr;
+    }
+
+    .next-project-image {
+        height: 220px;
+    }
+
+    .next-project-image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .back-link {
