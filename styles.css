@@ -1175,12 +1175,12 @@ body.project-page {
     margin-left: 280px;
     min-height: 100vh;
     background-color: var(--bg-color);
-    padding: 3rem 2.5rem 4rem;
+    padding: 2rem 2rem 3rem;
 }
 
 .project-detail {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
     padding: 0;
     background-color: transparent;
     min-height: auto;
@@ -1211,8 +1211,8 @@ body.project-page {
 
 .project-main-inner {
     display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 2.5rem;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 2rem;
     align-items: start;
 }
 
@@ -1284,20 +1284,20 @@ body.project-page {
 }
 
 .project-detail-content {
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
     display: grid;
-    grid-template-columns: 1fr 0.9fr;
-    gap: 3rem;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
+    gap: 2rem;
     align-items: start;
     justify-items: start;
 }
 
 .project-detail-image {
     width: 100%;
-    max-width: 680px;
+    max-width: 100%;
     position: sticky;
-    top: 120px;
+    top: 100px;
     margin-left: 0;
 }
 
@@ -1314,7 +1314,7 @@ body.project-page {
     position: relative;
     z-index: 2;
     pointer-events: none;
-    transform: scale(1.5);
+    transform: scale(1.55);
     transform-origin: center;
 }
 
@@ -1468,7 +1468,7 @@ body.project-page {
 }
 
 .project-figure {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
     max-width: 100%;
 }
 
