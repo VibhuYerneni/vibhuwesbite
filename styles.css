@@ -1467,6 +1467,27 @@ body.project-page {
     margin-bottom: 1.5rem;
 }
 
+.project-figure {
+    margin: 2.5rem 0;
+    max-width: 100%;
+}
+
+.project-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.project-figure figcaption {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin-top: 0.75rem;
+    padding-right: 0.5rem;
+}
+
 .project-detail-text ul {
     margin-left: 2rem;
     margin-bottom: 1.5rem;

@@ -70,6 +70,21 @@
                             <p>The app maintains a live view of the user’s positions and applies configurable rules for stop-loss and profit-taking. Users can set percentage or dollar-based stops and targets per position or use portfolio-level rules. Trailing stops automatically adjust as positions move in the user’s favor, locking in gains while limiting downside. For options, the system accounts for expiration and liquidity so recommendations stay executable.</p>
                             <p>TradeSafe uses Charles Schwab’s official API for authentication, account and position data, and order placement. Market data—real-time quotes, historical bars, and options chains—is supplied by Polygon, enabling accurate Greeks, volatility, and trend analysis. A custom machine learning model was trained on 50,000+ historical stock records spanning more than a decade and outperformed baseline approaches by 18% in prediction accuracy in backtesting. Predictions surface trade ideas, highlight higher-risk positions, and inform suggested stop and target levels. The pipeline runs server-side so the phone stays fast and battery-efficient.</p>
                             <p>Authentication is handled via OAuth 2.0 with Schwab; tokens are stored securely and refreshed automatically. The app supports Face ID for quick, secure access. Push notifications alert users to significant moves, stop-outs, or profit targets hit. The UI is built for quick scans and one-tap actions: view positions, adjust risk, or place orders with minimal friction. Built with native iOS (Swift), Schwab and Polygon APIs, and server-side ML and backtesting—TradeSafe demonstrates end-to-end ownership focused on real-world risk management for options and equity traders.</p>
+
+                            <figure class="project-figure">
+                                <img src="assets/tradesafe-architecture.png" alt="TradeSafe system architecture: User Interface, Core Processing, and Data & Integration layers">
+                                <figcaption><strong>System architecture.</strong> Automated Trading Discipline System (100): User Interface Layer (110) — Mobile App, Web Portal, Analyst Dashboard; Core Processing Layer (120) — Trade Lifecycle Management, AI Dynamic Stop Calculator, Universal Protection, Time-Based Position Manager, Analyst-Client Replication; Data & Integration Layer (130) — Market Data Feed, Brokerage API, Position Database.</figcaption>
+                            </figure>
+
+                            <figure class="project-figure">
+                                <img src="assets/tradesafe-flowchart.png" alt="TradeSafe trade lifecycle flowchart from recommendation to close">
+                                <figcaption><strong>Trade lifecycle.</strong> From trade recommendation (201) through protected order generation (202), submission to Brokerage API (203), order fill monitoring (204–205), position monitoring (206), profit target and time-limit checks (207–210), AI trailing stop (209), market close (211), and performance recording (212).</figcaption>
+                            </figure>
+
+                            <figure class="project-figure">
+                                <img src="assets/tradesafe-analyst-dashboard.png" alt="Analyst Dashboard workflow and client execution">
+                                <figcaption><strong>Analyst Dashboard workflow.</strong> Analyst Dashboard (500) drives Trade Recommendation (501), Target Client Group (502), and Replication Engine (503); Client Account Lookup (504), Risk Parameter Adjustment (505), Position Sizing Calculator (506), and Auto-Trade Validator (507) feed into the Client Execution Layer (508) for execution across Client A, B, C (509–511).</figcaption>
+                            </figure>
                         </div>
                         <div class="project-detail-image">
                             <div class="phone-frame-wrapper">
