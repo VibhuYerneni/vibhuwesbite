@@ -1026,11 +1026,235 @@ body.page-loaded .hero {
     color: var(--accent-color);
 }
 
-/* Project Detail Pages */
-.project-detail {
-    padding: 120px 20px 100px;
-    background-color: var(--bg-color);
+/* Project Detail Pages – sidebar layout (ref style) */
+body.project-page {
+    padding: 0;
+}
+
+.project-page .navbar {
+    display: none;
+}
+
+.project-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--bg-light);
+    border-right: 1px solid var(--border-color);
+    padding: 2.5rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.project-sidebar-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 2.5rem;
+}
+
+.project-sidebar-name a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-sidebar-name a:hover {
+    color: var(--accent-color);
+}
+
+.project-sidebar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-sidebar-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.project-sidebar-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.project-sidebar-nav a:hover {
+    color: var(--accent-color);
+}
+
+.project-sidebar-availability {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.project-sidebar-availability .status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.35rem;
+}
+
+.project-sidebar-availability .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    flex-shrink: 0;
+}
+
+.project-sidebar-availability a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.project-sidebar-availability a:hover {
+    text-decoration: underline;
+}
+
+.project-sidebar-contact {
+    margin-top: 1.5rem;
+}
+
+.project-sidebar-contact .prompt {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+}
+
+.project-sidebar-contact .chat {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.project-sidebar-contact a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.project-sidebar-contact a:hover {
+    text-decoration: underline;
+}
+
+.project-sidebar-social {
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.project-sidebar-social a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.project-sidebar-social a:hover {
+    color: var(--accent-color);
+}
+
+.project-main {
+    margin-left: 280px;
     min-height: 100vh;
+    background-color: var(--bg-color);
+    padding: 3rem 2.5rem 4rem;
+}
+
+.project-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: transparent;
+    min-height: auto;
+}
+
+.project-detail .back-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.project-detail .back-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.project-detail-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.project-main-inner {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.project-detail-body {
+    min-width: 0;
+}
+
+.project-info-sidebar {
+    background-color: rgba(26, 26, 46, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    position: sticky;
+    top: 2rem;
+}
+
+.project-info-sidebar .summary {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.project-meta-row:last-child {
+    border-bottom: none;
+}
+
+.project-meta-row .label {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.project-meta-row .value {
+    color: var(--primary-color);
+    text-align: right;
 }
 
 .back-link {
@@ -1320,6 +1544,29 @@ body.page-loaded .hero {
     
     .project-detail-image {
         max-width: 100%;
+        position: static;
+    }
+}
+
+@media (max-width: 991px) {
+    .project-sidebar {
+        display: none;
+    }
+
+    .project-main {
+        margin-left: 0;
+        padding: 100px 20px 3rem;
+    }
+
+    .project-page .navbar {
+        display: flex;
+    }
+
+    .project-main-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .project-info-sidebar {
         position: static;
     }
 }

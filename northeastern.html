@@ -6,8 +6,7 @@
     <title>Northeastern Projects - Srivibhu Yerneni</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Navigation -->
+<body class="project-page">
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Srivibhu Yerneni</a>
@@ -19,127 +18,145 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
                 <li><a href="index.html#resume" class="nav-link">Resume</a></li>
             </ul>
         </div>
     </nav>
-
-    <!-- Project Detail Section -->
-    <section class="project-detail">
-        <div class="container">
-            <a href="index.html#projects" class="back-link">← Back to Projects</a>
-            <h1 style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 3rem; text-align: center;">Northeastern Projects</h1>
-            
-            <!-- Thunderstruck Section -->
-            <div class="project-section">
-                <div class="project-detail-content">
-                    <div class="project-detail-text">
-                        <h2>Thunderstruck</h2>
-                        <h3>Overview</h3>
-                        <p>An interactive puzzle game designed for the Boston Children's Museum as part of Cornerstone 2. Players fit 5 pieces into Zeus's lightning bolt shape, and when completed, they receive a token representing the power of Zeus. The game features an interactive UI with hints, timer, and instructions, making it engaging for people of all ages.</p>
-                        
-                        <h3>Key Features</h3>
-                        <ul>
-                            <li><strong>Interactive Puzzle:</strong> Five-piece puzzle that forms Zeus's lightning bolt shape</li>
-                            <li><strong>Photoresistor Detection:</strong> Uses photoresistors to detect when pieces are placed on the wooden grid</li>
-                            <li><strong>Real-Time UI:</strong> Interactive interface showing hints, timer, and game instructions</li>
-                            <li><strong>Arduino Integration:</strong> Arduino microcontroller processes sensor data and controls game logic</li>
-                            <li><strong>Python Interface:</strong> Python-based UI connects with Arduino for seamless gameplay</li>
-                            <li><strong>Multi-Age Appeal:</strong> Designed to be challenging yet accessible for both children and adults</li>
-                        </ul>
-                        
-                        <h3>Technical Details</h3>
-                        <ul>
-                            <li>Developed from initial cardboard prototype with magnets to final wood grid design</li>
-                            <li>Implemented photoresistor sensors for piece detection</li>
-                            <li>Created Arduino-Python communication system for game control</li>
-                            <li>Designed and tested at Boston Children's Museum with positive feedback</li>
-                            <li>Players could replay multiple times to beat their best time</li>
-                        </ul>
-                        
-                        <p style="margin-top: 1.5rem;"><a href="https://sites.google.com/husky.neu.edu/cornerstone2project/home" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">View Full Project Site →</a></p>
-                    </div>
-                    <div class="project-detail-image">
-                        <img src="assets/thunderstruck-main.png" alt="Thunderstruck Puzzle Game" class="diagram-image">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Embedded Design Spider Robot Section -->
-            <div class="project-section">
-                <div class="project-detail-content">
-                    <div class="project-detail-text">
-                        <h2>Embedded Design Spider Robot</h2>
-                        <h3>Overview</h3>
-                        <p>Designed and built a six-legged hexapod robot using embedded systems principles, featuring servo motor control, microcontroller programming, and mechanical design.</p>
-                        
-                        <h3>Key Features</h3>
-                        <ul>
-                            <li><strong>Hexapod Design:</strong> Six-legged robot with articulated leg joints</li>
-                            <li><strong>Servo Motor Control:</strong> Multiple servo motors for precise leg movement and positioning</li>
-                            <li><strong>Microcontroller Integration:</strong> Central control board managing all motor operations</li>
-                            <li><strong>Embedded Programming:</strong> Real-time control algorithms for walking and movement patterns</li>
-                            <li><strong>Mechanical Design:</strong> Custom frame and leg structure for stability and mobility</li>
-                        </ul>
-                        
-                        <h3>Technical Details</h3>
-                        <ul>
-                            <li>Implemented servo motor control using embedded microcontroller</li>
-                            <li>Designed walking algorithms for coordinated leg movement</li>
-                            <li>Integrated power management and wiring systems</li>
-                            <li>Developed real-time control software for robot locomotion</li>
-                        </ul>
-                    </div>
-                    <div class="project-detail-image">
-                        <img src="assets/spider-robot.png" alt="Spider Robot" class="diagram-image">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Password Generator Section -->
-            <div class="project-section">
-                <div class="project-detail-content">
-                    <div class="project-detail-text">
-                        <h2>Password Generator</h2>
-                        <h3>Overview</h3>
-                        <p>Developed a secure password generation system with customizable parameters and cryptographic security features.</p>
-                        
-                        <h3>Key Features</h3>
-                        <ul>
-                            <li><strong>Customizable Parameters:</strong> Configurable password length and character sets</li>
-                            <li><strong>Cryptographic Security:</strong> Secure random number generation for password creation</li>
-                            <li><strong>User Interface:</strong> Intuitive interface for password generation</li>
-                            <li><strong>Security Analysis:</strong> Password strength evaluation and validation</li>
-                        </ul>
-                        
-                        <h3>Technical Details</h3>
-                        <ul>
-                            <li>Implemented secure random number generation algorithms</li>
-                            <li>Designed password strength evaluation metrics</li>
-                            <li>Created user-friendly interface for password generation</li>
-                            <li>Validated security and randomness of generated passwords</li>
-                        </ul>
-                    </div>
-                    <div class="project-detail-image">
-                        <img src="assets/password-gen-7-1.png" alt="Password Generator" class="diagram-image">
-                        <img src="assets/password-gen-7-2.png" alt="Password Generator Interface" class="diagram-image">
-                        <img src="assets/password-gen-8-1.png" alt="Password Generator Analysis" class="diagram-image">
-                    </div>
-                </div>
-            </div>
+    <aside class="project-sidebar">
+        <div class="project-sidebar-name">
+            <a href="index.html">Srivibhu Yerneni</a>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Srivibhu Yerneni. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/srivibhu-yerneni-030424280" target="_blank" class="social-link">LinkedIn</a>
-                <a href="mailto:yerneni.sr@northeastern.edu" class="social-link">yerneni.sr@northeastern.edu</a>
-            </div>
+        <ul class="project-sidebar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#resume">Resume</a></li>
+        </ul>
+        <div class="project-sidebar-availability">
+            <div class="status"><span class="status-dot"></span> Available for Work</div>
+            <a href="resume.pdf" target="_blank">View Resume →</a>
         </div>
-    </footer>
+        <div class="project-sidebar-contact">
+            <div class="prompt">Have a project in mind?</div>
+            <div class="chat">Let's Chat</div>
+            <a href="mailto:yerneni.sr@northeastern.edu">Contact →</a>
+        </div>
+        <div class="project-sidebar-social">
+            <a href="https://www.linkedin.com/in/srivibhu-yerneni-030424280" target="_blank">LinkedIn</a>
+        </div>
+    </aside>
+
+    <main class="project-main">
+        <section class="project-detail">
+            <a href="index.html#projects" class="back-link">← View all</a>
+            <h1 class="project-detail-title">Northeastern Projects</h1>
+
+            <div class="project-main-inner">
+                <div class="project-detail-body">
+                    <div class="project-section">
+                        <div class="project-detail-content">
+                            <div class="project-detail-text">
+                                <h2>Thunderstruck</h2>
+                                <h3>Overview</h3>
+                                <p>An interactive puzzle game designed for the Boston Children's Museum as part of Cornerstone 2. Players fit 5 pieces into Zeus's lightning bolt shape, and when completed, they receive a token representing the power of Zeus. The game features an interactive UI with hints, timer, and instructions, making it engaging for people of all ages.</p>
+                                <h3>Key Features</h3>
+                                <ul>
+                                    <li><strong>Interactive Puzzle:</strong> Five-piece puzzle that forms Zeus's lightning bolt shape</li>
+                                    <li><strong>Photoresistor Detection:</strong> Uses photoresistors to detect when pieces are placed on the wooden grid</li>
+                                    <li><strong>Real-Time UI:</strong> Interactive interface showing hints, timer, and game instructions</li>
+                                    <li><strong>Arduino Integration:</strong> Arduino microcontroller processes sensor data and controls game logic</li>
+                                    <li><strong>Python Interface:</strong> Python-based UI connects with Arduino for seamless gameplay</li>
+                                    <li><strong>Multi-Age Appeal:</strong> Designed to be challenging yet accessible for both children and adults</li>
+                                </ul>
+                                <h3>Technical Details</h3>
+                                <ul>
+                                    <li>Developed from initial cardboard prototype with magnets to final wood grid design</li>
+                                    <li>Implemented photoresistor sensors for piece detection</li>
+                                    <li>Created Arduino-Python communication system for game control</li>
+                                    <li>Designed and tested at Boston Children's Museum with positive feedback</li>
+                                    <li>Players could replay multiple times to beat their best time</li>
+                                </ul>
+                                <p style="margin-top: 1.5rem;"><a href="https://sites.google.com/husky.neu.edu/cornerstone2project/home" target="_blank" class="project-link">View Full Project Site →</a></p>
+                            </div>
+                            <div class="project-detail-image">
+                                <img src="assets/thunderstruck-main.png" alt="Thunderstruck Puzzle Game" class="diagram-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <div class="project-detail-content">
+                            <div class="project-detail-text">
+                                <h2>Embedded Design Spider Robot</h2>
+                                <h3>Overview</h3>
+                                <p>Designed and built a six-legged hexapod robot using embedded systems principles, featuring servo motor control, microcontroller programming, and mechanical design.</p>
+                                <h3>Key Features</h3>
+                                <ul>
+                                    <li><strong>Hexapod Design:</strong> Six-legged robot with articulated leg joints</li>
+                                    <li><strong>Servo Motor Control:</strong> Multiple servo motors for precise leg movement and positioning</li>
+                                    <li><strong>Microcontroller Integration:</strong> Central control board managing all motor operations</li>
+                                    <li><strong>Embedded Programming:</strong> Real-time control algorithms for walking and movement patterns</li>
+                                    <li><strong>Mechanical Design:</strong> Custom frame and leg structure for stability and mobility</li>
+                                </ul>
+                                <h3>Technical Details</h3>
+                                <ul>
+                                    <li>Implemented servo motor control using embedded microcontroller</li>
+                                    <li>Designed walking algorithms for coordinated leg movement</li>
+                                    <li>Integrated power management and wiring systems</li>
+                                    <li>Developed real-time control software for robot locomotion</li>
+                                </ul>
+                            </div>
+                            <div class="project-detail-image">
+                                <img src="assets/spider-robot.png" alt="Spider Robot" class="diagram-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <div class="project-detail-content">
+                            <div class="project-detail-text">
+                                <h2>Password Generator</h2>
+                                <h3>Overview</h3>
+                                <p>Developed a secure password generation system with customizable parameters and cryptographic security features.</p>
+                                <h3>Key Features</h3>
+                                <ul>
+                                    <li><strong>Customizable Parameters:</strong> Configurable password length and character sets</li>
+                                    <li><strong>Cryptographic Security:</strong> Secure random number generation for password creation</li>
+                                    <li><strong>User Interface:</strong> Intuitive interface for password generation</li>
+                                    <li><strong>Security Analysis:</strong> Password strength evaluation and validation</li>
+                                </ul>
+                                <h3>Technical Details</h3>
+                                <ul>
+                                    <li>Implemented secure random number generation algorithms</li>
+                                    <li>Designed password strength evaluation metrics</li>
+                                    <li>Created user-friendly interface for password generation</li>
+                                    <li>Validated security and randomness of generated passwords</li>
+                                </ul>
+                            </div>
+                            <div class="project-detail-image">
+                                <img src="assets/password-gen-7-1.png" alt="Password Generator" class="diagram-image">
+                                <img src="assets/password-gen-7-2.png" alt="Password Generator Interface" class="diagram-image">
+                                <img src="assets/password-gen-8-1.png" alt="Password Generator Analysis" class="diagram-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info-sidebar">
+                    <p class="summary">Selected embedded systems, digital design, and electronics projects from coursework at Northeastern University.</p>
+                    <div class="project-meta-row">
+                        <span class="label">Role</span>
+                        <span class="value">Academic</span>
+                    </div>
+                    <div class="project-meta-row">
+                        <span class="label">Client</span>
+                        <span class="value">Northeastern University</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

@@ -6,8 +6,7 @@
     <title>SEDS Lunabotics - Electrical - Srivibhu Yerneni</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Navigation -->
+<body class="project-page">
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Srivibhu Yerneni</a>
@@ -19,95 +18,107 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
                 <li><a href="index.html#resume" class="nav-link">Resume</a></li>
             </ul>
         </div>
     </nav>
+    <aside class="project-sidebar">
+        <div class="project-sidebar-name">
+            <a href="index.html">Srivibhu Yerneni</a>
+        </div>
+        <ul class="project-sidebar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#resume">Resume</a></li>
+        </ul>
+        <div class="project-sidebar-availability">
+            <div class="status"><span class="status-dot"></span> Available for Work</div>
+            <a href="resume.pdf" target="_blank">View Resume →</a>
+        </div>
+        <div class="project-sidebar-contact">
+            <div class="prompt">Have a project in mind?</div>
+            <div class="chat">Let's Chat</div>
+            <a href="mailto:yerneni.sr@northeastern.edu">Contact →</a>
+        </div>
+        <div class="project-sidebar-social">
+            <a href="https://www.linkedin.com/in/srivibhu-yerneni-030424280" target="_blank">LinkedIn</a>
+        </div>
+    </aside>
 
-    <!-- Project Detail Section -->
-    <section class="project-detail">
-        <div class="container">
-            <a href="index.html#projects" class="back-link">← Back to Projects</a>
-            <h1 style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 3rem; text-align: center;">SEDS Lunabotics - Electrical</h1>
-            
-            <!-- I²C Power & Communication Hub Section -->
-            <div class="project-section">
-                <div class="project-detail-content">
-                    <div class="project-detail-text">
-                        <h2>I²C Power & Communication Hub</h2>
-                        
-                        <h3>Overview</h3>
-                        <p>Designed a modular I²C communication and power distribution hub using a Raspberry Pi and TCA9548A multiplexer to support multiple downstream boards with address isolation and improved bus reliability.</p>
-                        
-                        <h3>Key Features</h3>
-                        <ul>
-                            <li><strong>Modular Design:</strong> I²C communication and power distribution hub</li>
-                            <li><strong>Raspberry Pi Integration:</strong> Central control using Raspberry Pi</li>
-                            <li><strong>TCA9548A Multiplexer:</strong> Address isolation for multiple devices</li>
-                            <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
-                            <li><strong>Configurable Power:</strong> Jumper-selectable 3.3V/5V power distribution for mixed-voltage peripherals</li>
-                            <li><strong>Bus Reliability:</strong> Configurable pull-ups, reset handling, and bus protection</li>
-                        </ul>
-                        
-                        <h3>Technical Details</h3>
-                        <ul>
-                            <li>Developed full schematic and PCB in KiCad</li>
-                            <li>Implemented configurable pull-ups and reset handling</li>
-                            <li>Designed for reliable multi-device I²C operation</li>
-                            <li>Enabled seamless hardware-software integration with ROS2 drivers and control nodes</li>
-                            <li>Validated board functionality through hardware bring-up, debugging, and system-level testing</li>
-                        </ul>
+    <main class="project-main">
+        <section class="project-detail">
+            <a href="index.html#projects" class="back-link">← View all</a>
+            <h1 class="project-detail-title">SEDS Lunabotics - Electrical</h1>
+
+            <div class="project-main-inner">
+                <div class="project-detail-body">
+                    <div class="project-section">
+                        <div class="project-detail-content">
+                            <div class="project-detail-text">
+                                <h2>I²C Power & Communication Hub</h2>
+                                <h3>Overview</h3>
+                                <p>Designed a modular I²C communication and power distribution hub using a Raspberry Pi and TCA9548A multiplexer to support multiple downstream boards with address isolation and improved bus reliability.</p>
+                                <h3>Key Features</h3>
+                                <ul>
+                                    <li><strong>Modular Design:</strong> I²C communication and power distribution hub</li>
+                                    <li><strong>Raspberry Pi Integration:</strong> Central control using Raspberry Pi</li>
+                                    <li><strong>TCA9548A Multiplexer:</strong> Address isolation for multiple devices</li>
+                                    <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
+                                    <li><strong>Configurable Power:</strong> Jumper-selectable 3.3V/5V power distribution</li>
+                                    <li><strong>Bus Reliability:</strong> Configurable pull-ups, reset handling, and bus protection</li>
+                                </ul>
+                                <h3>Technical Details</h3>
+                                <ul>
+                                    <li>Developed full schematic and PCB in KiCad</li>
+                                    <li>Implemented configurable pull-ups and reset handling</li>
+                                    <li>Designed for reliable multi-device I²C operation</li>
+                                    <li>Enabled seamless hardware-software integration with ROS2 drivers and control nodes</li>
+                                </ul>
+                            </div>
+                            <div class="project-detail-image">
+                                <img src="assets/lunabotics-i2c-schematic.png" alt="I²C Power & Communication Hub Schematic" class="diagram-image">
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-detail-image">
-                        <img src="assets/lunabotics-i2c-schematic.png" alt="I²C Power & Communication Hub Schematic" class="diagram-image">
+
+                    <div class="project-section">
+                        <div class="project-detail-content">
+                            <div class="project-detail-text">
+                                <h2>Beacon Board</h2>
+                                <h3>Overview</h3>
+                                <p>The beacon board supports 3 external UWB beacons communicating with 4 UWB beacons on the robot corners for triangulation and robot position tracking on the field.</p>
+                                <h3>Key Features</h3>
+                                <ul>
+                                    <li><strong>UWB Communication:</strong> Communication between 3 external and 4 on-robot UWB beacons</li>
+                                    <li><strong>Triangulation System:</strong> Robot position tracking on the field</li>
+                                    <li><strong>Microcontroller Control:</strong> Circuit controlling the UWB beacons</li>
+                                    <li><strong>LiPo Battery:</strong> Rechargeable LiPo with charging circuit</li>
+                                    <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
+                                </ul>
+                            </div>
+                            <div class="project-detail-image">
+                                <img src="assets/lunabotics-beacon-board.png" alt="Beacon Board PCB" class="diagram-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info-sidebar">
+                    <p class="summary">I²C communication and power hub plus UWB beacon board for rover triangulation, fully designed in KiCad with integrated LiPo charging.</p>
+                    <div class="project-meta-row">
+                        <span class="label">Role</span>
+                        <span class="value">Electrical / PCB Design</span>
+                    </div>
+                    <div class="project-meta-row">
+                        <span class="label">Client</span>
+                        <span class="value">SEDS Northeastern</span>
                     </div>
                 </div>
             </div>
-            
-            <!-- Beacon Board Section -->
-            <div class="project-section">
-                <div class="project-detail-content">
-                    <div class="project-detail-text">
-                        <h2>Beacon Board</h2>
-                        
-                        <h3>Overview</h3>
-                        <p>The beacon board is a board we will be using for our 3 external UWB beacons to communicate to the 4 UWB beacons on the corners of our robot for triangulation of our robot (to see where our robot is on the field).</p>
-                        
-                        <h3>Key Features</h3>
-                        <ul>
-                            <li><strong>UWB Communication:</strong> Enables communication between 3 external UWB beacons and 4 UWB beacons on robot corners</li>
-                            <li><strong>Triangulation System:</strong> Provides robot position tracking on the field through UWB beacon triangulation</li>
-                            <li><strong>Microcontroller Control:</strong> Basic microcontroller circuit controlling the UWB beacons</li>
-                            <li><strong>Battery Rechargeable:</strong> LiPo battery powered with recharge capability instead of disposable AA batteries</li>
-                            <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout design</li>
-                        </ul>
-                        
-                        <h3>Technical Details</h3>
-                        <ul>
-                            <li>Designed for UWB beacon communication and triangulation</li>
-                            <li>Integrated LiPo battery charging circuit</li>
-                            <li>Microcontroller-based control system for beacon management</li>
-                            <li>Power management system for efficient battery usage</li>
-                        </ul>
-                    </div>
-                    <div class="project-detail-image">
-                        <img src="assets/lunabotics-beacon-board.png" alt="Beacon Board PCB" class="diagram-image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Srivibhu Yerneni. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/srivibhu-yerneni-030424280" target="_blank" class="social-link">LinkedIn</a>
-                <a href="mailto:yerneni.sr@northeastern.edu" class="social-link">yerneni.sr@northeastern.edu</a>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

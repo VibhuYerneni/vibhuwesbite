@@ -6,8 +6,7 @@
     <title>SEDS Lunabotics - Software - Srivibhu Yerneni</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Navigation -->
+<body class="project-page">
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Srivibhu Yerneni</a>
@@ -19,58 +18,86 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
                 <li><a href="index.html#resume" class="nav-link">Resume</a></li>
             </ul>
         </div>
     </nav>
+    <aside class="project-sidebar">
+        <div class="project-sidebar-name">
+            <a href="index.html">Srivibhu Yerneni</a>
+        </div>
+        <ul class="project-sidebar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#resume">Resume</a></li>
+        </ul>
+        <div class="project-sidebar-availability">
+            <div class="status"><span class="status-dot"></span> Available for Work</div>
+            <a href="resume.pdf" target="_blank">View Resume →</a>
+        </div>
+        <div class="project-sidebar-contact">
+            <div class="prompt">Have a project in mind?</div>
+            <div class="chat">Let's Chat</div>
+            <a href="mailto:yerneni.sr@northeastern.edu">Contact →</a>
+        </div>
+        <div class="project-sidebar-social">
+            <a href="https://www.linkedin.com/in/srivibhu-yerneni-030424280" target="_blank">LinkedIn</a>
+        </div>
+    </aside>
 
-    <!-- Project Detail Section -->
-    <section class="project-detail">
-        <div class="container">
-            <a href="index.html#projects" class="back-link">← Back to Projects</a>
-            <div class="project-detail-content">
-                <div class="project-detail-text">
-                    <h1>SEDS Lunabotics - Software</h1>
-                    <p class="project-subtitle">ROS2 Architecture for Autonomous Rover</p>
-                    
-                    <h2>Overview</h2>
-                    <p>Designed a modular ROS2 architecture for Northeastern's SEDS Lunabotics rover, implementing sensing, navigation, and control nodes with standardized interfaces allowing for a fully autonomous rover.</p>
-                    
-                    <h2>Key Achievements</h2>
-                    <ul>
-                        <li>Contributed to 3rd place finish nationally in the NASA Lunabotics style competition at the University of Iowa</li>
-                        <li>Designed modular ROS2 architecture for autonomous Lunabotics rover</li>
-                        <li>Implemented distributed nodes for perception, localization, navigation, and control</li>
-                        <li>Defined clean topic, service, and message interfaces to enable parallel team development</li>
-                    </ul>
-                    
-                    <h2>Technical Implementation</h2>
-                    <ul>
-                        <li><strong>Distributed Architecture:</strong> Implemented distributed nodes for perception, localization, navigation, and control</li>
-                        <li><strong>Standardized Interfaces:</strong> Defined clean topic, service, and message interfaces</li>
-                        <li><strong>Sensor Integration:</strong> Integrated sensor pipelines (IMU, encoders, vision) with navigation and actuator control</li>
-                        <li><strong>Dual Mode Support:</strong> Supported autonomous and tele-operated modes with reliable DDS-based communication</li>
-                        <li><strong>Robustness:</strong> Prioritized robustness, real-time responsiveness, and debuggability under competition constraints</li>
-                    </ul>
+    <main class="project-main">
+        <section class="project-detail">
+            <a href="index.html#projects" class="back-link">← View all</a>
+            <h1 class="project-detail-title">SEDS Lunabotics - Software</h1>
+
+            <div class="project-main-inner">
+                <div class="project-detail-body">
+                    <div class="project-detail-content">
+                        <div class="project-detail-text">
+                            <h2>The Challenge & Process</h2>
+                            <p>Designed a modular ROS2 architecture for Northeastern's SEDS Lunabotics rover, implementing sensing, navigation, and control nodes with standardized interfaces allowing for a fully autonomous rover.</p>
+
+                            <h2>The Solution & Impact</h2>
+                            <h3>Key Achievements</h3>
+                            <ul>
+                                <li>Contributed to 3rd place finish nationally in the NASA Lunabotics style competition at the University of Iowa</li>
+                                <li>Designed modular ROS2 architecture for autonomous Lunabotics rover</li>
+                                <li>Implemented distributed nodes for perception, localization, navigation, and control</li>
+                                <li>Defined clean topic, service, and message interfaces to enable parallel team development</li>
+                            </ul>
+
+                            <h3>Technical Implementation</h3>
+                            <ul>
+                                <li><strong>Distributed Architecture:</strong> Implemented distributed nodes for perception, localization, navigation, and control</li>
+                                <li><strong>Standardized Interfaces:</strong> Defined clean topic, service, and message interfaces</li>
+                                <li><strong>Sensor Integration:</strong> Integrated sensor pipelines (IMU, encoders, vision) with navigation and actuator control</li>
+                                <li><strong>Dual Mode Support:</strong> Supported autonomous and tele-operated modes with reliable DDS-based communication</li>
+                                <li><strong>Robustness:</strong> Prioritized robustness, real-time responsiveness, and debuggability under competition constraints</li>
+                            </ul>
+                        </div>
+                        <div class="project-detail-image">
+                            <img src="assets/lunabotics-software-diagram-1.png" alt="SEDS Lunabotics Architecture Diagram 1" class="diagram-image">
+                            <img src="assets/lunabotics-software-diagram-2.png" alt="SEDS Lunabotics Architecture Diagram 2" class="diagram-image">
+                        </div>
+                    </div>
                 </div>
-                <div class="project-detail-image">
-                    <img src="assets/lunabotics-software-diagram-1.png" alt="SEDS Lunabotics Architecture Diagram 1" class="diagram-image">
-                    <img src="assets/lunabotics-software-diagram-2.png" alt="SEDS Lunabotics Architecture Diagram 2" class="diagram-image">
+
+                <div class="project-info-sidebar">
+                    <p class="summary">Modular ROS2 software stack for an autonomous Lunabotics rover covering perception, navigation, and control. Contributed to 3rd place nationally in NASA Lunabotics.</p>
+                    <div class="project-meta-row">
+                        <span class="label">Role</span>
+                        <span class="value">Software / ROS2</span>
+                    </div>
+                    <div class="project-meta-row">
+                        <span class="label">Client</span>
+                        <span class="value">SEDS Northeastern</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Srivibhu Yerneni. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/srivibhu-yerneni-030424280" target="_blank" class="social-link">LinkedIn</a>
-                <a href="mailto:yerneni.sr@northeastern.edu" class="social-link">yerneni.sr@northeastern.edu</a>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
