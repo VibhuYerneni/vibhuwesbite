@@ -1437,6 +1437,21 @@ body.project-page {
     margin-top: 0;
 }
 
+/* Two main section headers: large type + underline (ref style) */
+.project-section-heading {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: var(--primary-color) !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 1.25rem !important;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.project-detail-text .project-section-heading:first-child {
+    margin-top: 0 !important;
+}
+
 .project-detail-text h3 {
     font-size: 1.4rem;
     font-weight: 600;
