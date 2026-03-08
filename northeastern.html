@@ -54,30 +54,17 @@
 
             <div class="project-main-inner">
                 <div class="project-detail-body">
+                    <!-- Thunderstruck -->
                     <div class="project-section">
                         <div class="project-detail-content">
                             <div class="project-detail-text">
                                 <h2>Thunderstruck</h2>
-                                <h3>Overview</h3>
-                                <p>An interactive puzzle game designed for the Boston Children's Museum as part of Cornerstone 2. Players fit 5 pieces into Zeus's lightning bolt shape, and when completed, they receive a token representing the power of Zeus. The game features an interactive UI with hints, timer, and instructions, making it engaging for people of all ages.</p>
-                                <h3>Key Features</h3>
-                                <ul>
-                                    <li><strong>Interactive Puzzle:</strong> Five-piece puzzle that forms Zeus's lightning bolt shape</li>
-                                    <li><strong>Photoresistor Detection:</strong> Uses photoresistors to detect when pieces are placed on the wooden grid</li>
-                                    <li><strong>Real-Time UI:</strong> Interactive interface showing hints, timer, and game instructions</li>
-                                    <li><strong>Arduino Integration:</strong> Arduino microcontroller processes sensor data and controls game logic</li>
-                                    <li><strong>Python Interface:</strong> Python-based UI connects with Arduino for seamless gameplay</li>
-                                    <li><strong>Multi-Age Appeal:</strong> Designed to be challenging yet accessible for both children and adults</li>
-                                </ul>
-                                <h3>Technical Details</h3>
-                                <ul>
-                                    <li>Developed from initial cardboard prototype with magnets to final wood grid design</li>
-                                    <li>Implemented photoresistor sensors for piece detection</li>
-                                    <li>Created Arduino-Python communication system for game control</li>
-                                    <li>Designed and tested at Boston Children's Museum with positive feedback</li>
-                                    <li>Players could replay multiple times to beat their best time</li>
-                                </ul>
-                                <p style="margin-top: 1.5rem;"><a href="https://sites.google.com/husky.neu.edu/cornerstone2project/home" target="_blank" class="project-link">View Full Project Site →</a></p>
+                                <h3>Challenge</h3>
+                                <p>For Cornerstone 2 we had to design an interactive exhibit for the Boston Children's Museum that would work for a wide age range. The goal was a puzzle where players fit five pieces into Zeus's lightning bolt shape and receive a token when complete—without making it feel like a passive display. We needed reliable detection of piece placement, clear feedback, and a way to make the experience replayable (e.g., beat your best time).</p>
+                                <p>The main technical hurdle was sensing which slots were filled on a wooden grid in a museum environment—durable, low-cost, and robust to lighting and wear. We also had to tie that sensing to an engaging UI (hints, timer, instructions) and keep the whole system simple to maintain.</p>
+                                <h3>Solution</h3>
+                                <p>We used photoresistors under the grid to detect when pieces were placed in each slot, with an Arduino reading the sensors and running the game logic. A Python-based UI on a separate display connected to the Arduino over serial to show hints, a timer, and instructions in real time. We iterated from a cardboard-and-magnets prototype to a final wood grid design, then brought the exhibit to the museum for testing; players could replay to beat their best time and gave positive feedback. The project is documented on a full project site.</p>
+                                <p><a href="https://sites.google.com/husky.neu.edu/cornerstone2project/home" target="_blank" class="project-link">View Full Project Site →</a></p>
                             </div>
                             <div class="project-detail-image">
                                 <img src="assets/thunderstruck-main.png" alt="Thunderstruck Puzzle Game" class="diagram-image">
@@ -85,27 +72,16 @@
                         </div>
                     </div>
 
+                    <!-- Embedded Design Spider Robot -->
                     <div class="project-section">
                         <div class="project-detail-content">
                             <div class="project-detail-text">
                                 <h2>Embedded Design Spider Robot</h2>
-                                <h3>Overview</h3>
-                                <p>Designed and built a six-legged hexapod robot using embedded systems principles, featuring servo motor control, microcontroller programming, and mechanical design.</p>
-                                <h3>Key Features</h3>
-                                <ul>
-                                    <li><strong>Hexapod Design:</strong> Six-legged robot with articulated leg joints</li>
-                                    <li><strong>Servo Motor Control:</strong> Multiple servo motors for precise leg movement and positioning</li>
-                                    <li><strong>Microcontroller Integration:</strong> Central control board managing all motor operations</li>
-                                    <li><strong>Embedded Programming:</strong> Real-time control algorithms for walking and movement patterns</li>
-                                    <li><strong>Mechanical Design:</strong> Custom frame and leg structure for stability and mobility</li>
-                                </ul>
-                                <h3>Technical Details</h3>
-                                <ul>
-                                    <li>Implemented servo motor control using embedded microcontroller</li>
-                                    <li>Designed walking algorithms for coordinated leg movement</li>
-                                    <li>Integrated power management and wiring systems</li>
-                                    <li>Developed real-time control software for robot locomotion</li>
-                                </ul>
+                                <h3>Challenge</h3>
+                                <p>The assignment was to design and build a six-legged hexapod robot that could walk using embedded systems principles. We had to coordinate multiple servo motors for leg movement, design a mechanical frame that was stable and mobile, and implement real-time control so the robot could follow walking patterns reliably.</p>
+                                <p>Challenges included power management and wiring for many servos, writing algorithms for coordinated leg motion, and integrating a central microcontroller with the mechanical design so the robot could support its own weight and move in a controlled way.</p>
+                                <h3>Solution</h3>
+                                <p>I built a hexapod with articulated leg joints driven by multiple servos, all controlled from a single microcontroller. The firmware implemented walking algorithms for coordinated leg movement and real-time control of gait and direction. I designed a custom frame and leg structure for stability and mobility, integrated power distribution and wiring, and developed the control software for locomotion. The result was a functional hexapod that demonstrated embedded programming, servo control, and mechanical integration in one system.</p>
                             </div>
                             <div class="project-detail-image">
                                 <img src="assets/spider-robot.png" alt="Spider Robot" class="diagram-image">
@@ -113,26 +89,16 @@
                         </div>
                     </div>
 
+                    <!-- Password Generator -->
                     <div class="project-section">
                         <div class="project-detail-content">
                             <div class="project-detail-text">
                                 <h2>Password Generator</h2>
-                                <h3>Overview</h3>
-                                <p>Developed a secure password generation system with customizable parameters and cryptographic security features.</p>
-                                <h3>Key Features</h3>
-                                <ul>
-                                    <li><strong>Customizable Parameters:</strong> Configurable password length and character sets</li>
-                                    <li><strong>Cryptographic Security:</strong> Secure random number generation for password creation</li>
-                                    <li><strong>User Interface:</strong> Intuitive interface for password generation</li>
-                                    <li><strong>Security Analysis:</strong> Password strength evaluation and validation</li>
-                                </ul>
-                                <h3>Technical Details</h3>
-                                <ul>
-                                    <li>Implemented secure random number generation algorithms</li>
-                                    <li>Designed password strength evaluation metrics</li>
-                                    <li>Created user-friendly interface for password generation</li>
-                                    <li>Validated security and randomness of generated passwords</li>
-                                </ul>
+                                <h3>Challenge</h3>
+                                <p>The goal was to build a secure password generation tool that gave users control over length and character sets while guaranteeing cryptographic quality. We needed to use proper random number generation (not weak PRNGs), provide an intuitive interface, and help users understand how strong their passwords were.</p>
+                                <p>Requirements included configurable parameters (length, symbols, numbers, etc.), security analysis or strength evaluation so users could trust the output, and validation that the generated passwords were actually random and suitable for real use.</p>
+                                <h3>Solution</h3>
+                                <p>I implemented a password generator that uses secure random number generation for creation and includes configurable length and character sets. The UI lets users set options and generate passwords with one action; a strength-evaluation feature gives feedback on the quality of the output. I designed metrics for password strength, validated the randomness and security of the generator, and built a clear interface so the tool was both secure and easy to use for typical password needs.</p>
                             </div>
                             <div class="project-detail-image">
                                 <img src="assets/password-gen-7-1.png" alt="Password Generator" class="diagram-image">
