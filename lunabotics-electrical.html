@@ -54,19 +54,53 @@
 
             <div class="project-main-inner">
                 <div class="project-detail-body">
-                    <div class="project-detail-content">
-                        <div class="project-detail-text">
-                            <h2 class="project-section-heading">The Challenge & Process</h2>
-                            <p>The Lunabotics rover required reliable I²C connectivity across multiple boards and accurate position tracking on the competition field. I took on the electrical design for two boards: an I²C power and communication hub to connect the Raspberry Pi to downstream hardware with address isolation, and a UWB beacon board for triangulation so the robot could be located in real time.</p>
-                            <p>I designed both boards in KiCad from schematic through PCB layout, with configurable pull-ups and reset handling for bus reliability, jumper-selectable 3.3V/5V power where needed, and a LiPo charging circuit on the beacon board so the field system could run without disposable batteries. The process involved iterating with the software team so the hardware would plug into the ROS2-driven control stack without bottlenecks.</p>
-
-                            <h2 class="project-section-heading">The Solution & Impact</h2>
-                            <p>The I²C hub uses a Raspberry Pi and TCA9548A multiplexer to give multiple downstream boards clean address isolation and improved bus reliability. Full schematic and PCB were done in KiCad, enabling seamless hardware–software integration with the team’s ROS2 drivers and control nodes. The beacon board hosts three external UWB beacons that communicate with four on-robot beacons for triangulation and position tracking on the field; it includes microcontroller-based control and a rechargeable LiPo with integrated charging.</p>
-                            <p>Both boards were brought up, debugged, and validated in system-level testing. They supported the rover’s 3rd place finish at the NASA Lunabotics competition and are documented for future rover iterations.</p>
+                    <div class="project-section">
+                        <div class="project-detail-content">
+                            <div class="project-detail-text">
+                                <h2>I²C Power & Communication Hub</h2>
+                                <h3>Overview</h3>
+                                <p>Designed a modular I²C communication and power distribution hub using a Raspberry Pi and TCA9548A multiplexer to support multiple downstream boards with address isolation and improved bus reliability.</p>
+                                <h3>Key Features</h3>
+                                <ul>
+                                    <li><strong>Modular Design:</strong> I²C communication and power distribution hub</li>
+                                    <li><strong>Raspberry Pi Integration:</strong> Central control using Raspberry Pi</li>
+                                    <li><strong>TCA9548A Multiplexer:</strong> Address isolation for multiple devices</li>
+                                    <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
+                                    <li><strong>Configurable Power:</strong> Jumper-selectable 3.3V/5V power distribution</li>
+                                    <li><strong>Bus Reliability:</strong> Configurable pull-ups, reset handling, and bus protection</li>
+                                </ul>
+                                <h3>Technical Details</h3>
+                                <ul>
+                                    <li>Developed full schematic and PCB in KiCad</li>
+                                    <li>Implemented configurable pull-ups and reset handling</li>
+                                    <li>Designed for reliable multi-device I²C operation</li>
+                                    <li>Enabled seamless hardware-software integration with ROS2 drivers and control nodes</li>
+                                </ul>
+                            </div>
+                            <div class="project-detail-image">
+                                <img src="assets/lunabotics-i2c-schematic.png" alt="I²C Power & Communication Hub Schematic" class="diagram-image">
+                            </div>
                         </div>
-                        <div class="project-detail-image">
-                            <img src="assets/lunabotics-i2c-schematic.png" alt="I²C Power & Communication Hub Schematic" class="diagram-image">
-                            <img src="assets/lunabotics-beacon-board.png" alt="Beacon Board PCB" class="diagram-image">
+                    </div>
+
+                    <div class="project-section">
+                        <div class="project-detail-content">
+                            <div class="project-detail-text">
+                                <h2>Beacon Board</h2>
+                                <h3>Overview</h3>
+                                <p>The beacon board supports 3 external UWB beacons communicating with 4 UWB beacons on the robot corners for triangulation and robot position tracking on the field.</p>
+                                <h3>Key Features</h3>
+                                <ul>
+                                    <li><strong>UWB Communication:</strong> Communication between 3 external and 4 on-robot UWB beacons</li>
+                                    <li><strong>Triangulation System:</strong> Robot position tracking on the field</li>
+                                    <li><strong>Microcontroller Control:</strong> Circuit controlling the UWB beacons</li>
+                                    <li><strong>LiPo Battery:</strong> Rechargeable LiPo with charging circuit</li>
+                                    <li><strong>Full PCB Design:</strong> Complete schematic and PCB layout in KiCad</li>
+                                </ul>
+                            </div>
+                            <div class="project-detail-image">
+                                <img src="assets/lunabotics-beacon-board.png" alt="Beacon Board PCB" class="diagram-image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -83,22 +117,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="next-project">
-            <a href="northeastern.html" class="next-project-link">
-                <span class="next-project-label">→ NEXT PROJECT</span>
-                <div class="next-project-content">
-                    <div class="next-project-image">
-                        <img src="assets/northeastern.png" alt="Northeastern Projects">
-                    </div>
-                    <div class="next-project-text">
-                        <h3>Northeastern Projects</h3>
-                        <p>Selected embedded systems, digital design, and electronics projects from my coursework at Northeastern University.</p>
-                        <span class="next-project-tag">Academic</span>
-                    </div>
-                </div>
-            </a>
         </section>
     </main>
 
