@@ -344,17 +344,22 @@ body.page-loaded .hero {
     background-color: #0A0A1A;
 }
 
+.skills .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 .skills-graphic {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
 
 .skills-graphic video {
     width: 100%;
-    max-width: 900px;
-    min-height: 400px;
+    max-width: 1200px;
+    min-height: 520px;
     display: block;
     background: #0A0A1A;
 }
