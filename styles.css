@@ -1303,13 +1303,15 @@ body.project-page.project-loaded .project-main {
 
 .next-project-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 320px) 1fr;
     gap: 2rem;
     align-items: center;
 }
 
 .next-project-image {
     width: 100%;
+    max-width: 320px;
+    max-height: 200px;
     border-radius: 12px;
     overflow: hidden;
     background-color: var(--bg-light);
@@ -1318,7 +1320,8 @@ body.project-page.project-loaded .project-main {
 
 .next-project-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    max-height: 200px;
     display: block;
     object-fit: cover;
 }
