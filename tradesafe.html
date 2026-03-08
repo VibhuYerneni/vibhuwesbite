@@ -61,23 +61,33 @@
                     <div class="project-detail-content">
                         <div class="project-detail-text">
                             <h2>The Challenge & Process</h2>
-                            <p>TradeSafe is an intelligent mobile application designed to assist investors with automated risk management, intelligent stop-loss & profit-taking systems, and AI-driven market insights.</p>
+                            <p>Retail options traders often struggle to manage risk at scale. Manually setting stop-losses, tracking dozens of positions, and reacting to market moves in real time is error-prone and emotionally draining. I wanted to build a mobile-first tool that could automate risk and profit-taking while surfacing actionable insights—without requiring users to stare at charts all day.</p>
+                            <p>I scoped the project around three pillars: <strong>brokerage integration</strong> (so decisions could be executed, not just suggested), <strong>options-aware logic</strong> (expiration, Greeks, and liquidity), and <strong>predictive signals</strong> backed by historical data. I chose Charles Schwab’s API for real brokerage connectivity and Polygon for high-quality, historical and real-time equity and options data. The design process centered on a simple dashboard: positions, risk metrics, and one-tap actions for stops and profit targets, with push notifications for critical events.</p>
+                            <p>Development followed an iterative cycle: core API integration and auth first, then position sync and risk calculations, then the ML pipeline and backtesting, and finally the iOS UI, notifications, and polish. I prioritized security (OAuth 2.0, token storage, Face ID) and reliability (retries, rate limiting, offline-friendly reads) from the start.</p>
 
                             <h2>The Solution & Impact</h2>
-                            <h3>Key Features</h3>
-                            <ul>
-                                <li><strong>Automated Risk Management:</strong> Intelligent stop-loss & profit-taking system</li>
-                                <li><strong>Schwab API Integration:</strong> Direct brokerage account connectivity</li>
-                                <li><strong>Options Trading Focus:</strong> High-volume options analysis & alerts</li>
-                                <li><strong>AI-Powered Insights:</strong> Market analysis & trade recommendations</li>
-                                <li><strong>Portfolio Protection:</strong> Automatic trailing stops & position monitoring</li>
-                                <li><strong>Real-Time Data:</strong> Live market feeds via Polygon API</li>
-                                <li><strong>Secure Authentication:</strong> Face ID + OAuth 2.0 token management</li>
-                                <li><strong>Push Notifications:</strong> Trade alerts & market opportunities</li>
-                            </ul>
+                            <p>TradeSafe is an intelligent mobile application that connects directly to a user’s Schwab brokerage account to automate risk management, intelligent stop-loss and profit-taking, and AI-driven market insights—all from a single, focused interface.</p>
 
-                            <h3>Technical Highlights</h3>
-                            <p>Developed and trained a custom machine learning model that outperformed baseline AI models by 18% in prediction accuracy, validated through backtesting on 50,000+ historical stock records dating back over a decade.</p>
+                            <h3>Risk Management & Automation</h3>
+                            <p>The app maintains a live view of the user’s positions and applies configurable rules for stop-loss and profit-taking. Users can set percentage or dollar-based stops and targets per position or use portfolio-level rules. Trailing stops automatically adjust as positions move in the user’s favor, locking in gains while limiting downside. For options, the system accounts for expiration and liquidity so recommendations stay executable.</p>
+
+                            <h3>Brokerage & Market Data</h3>
+                            <p>TradeSafe uses Charles Schwab’s official API for authentication, account and position data, and order placement. Market data—real-time quotes, historical bars, and options chains—is supplied by Polygon, enabling accurate Greeks, volatility, and trend analysis. The app syncs positions and risk metrics on a schedule and on demand, with clear feedback when the market is closed or data is stale.</p>
+
+                            <h3>AI & Predictions</h3>
+                            <p>A custom machine learning model was trained on 50,000+ historical stock records spanning more than a decade. The model outperformed baseline approaches by 18% in prediction accuracy in backtesting. Predictions are used to surface trade ideas, highlight higher-risk positions, and inform suggested stop and target levels. The pipeline runs server-side and results are delivered to the app so the phone stays fast and battery-efficient.</p>
+
+                            <h3>Security & Experience</h3>
+                            <p>Authentication is handled via OAuth 2.0 with Schwab; tokens are stored securely and refreshed automatically. The app supports Face ID for quick, secure access. Push notifications alert users to significant moves, stop-outs, or profit targets hit, so they can stay informed without keeping the app open. The UI is built for quick scans and one-tap actions: view positions, adjust risk, or place orders with minimal friction.</p>
+
+                            <h3>Technical Stack & Implementation</h3>
+                            <ul>
+                                <li><strong>Mobile:</strong> Native iOS (Swift), with a clean separation between UI, business logic, and networking.</li>
+                                <li><strong>APIs:</strong> Charles Schwab API (auth, accounts, orders); Polygon.io (quotes, history, options).</li>
+                                <li><strong>Backend & ML:</strong> Server-side components for data ingestion, model inference, and backtesting; model training and evaluation run on historical datasets.</li>
+                                <li><strong>Security:</strong> OAuth 2.0, secure token storage, Face ID, and best practices for handling brokerage credentials.</li>
+                            </ul>
+                            <p>TradeSafe demonstrates end-to-end ownership: API integration, data modeling, ML training and validation, and a production-quality mobile experience focused on real-world risk management for options and equity traders.</p>
                         </div>
                         <div class="project-detail-image">
                             <div class="phone-frame-wrapper">
@@ -98,7 +108,7 @@
                 </div>
 
                 <div class="project-info-sidebar">
-                    <p class="summary">AI-powered mobile app for automated risk management, intelligent stop-loss & profit-taking, with Schwab API integration and real-time market data.</p>
+                    <p class="summary">iOS app that connects to Schwab for automated risk management, trailing stops, and profit-taking. Uses a custom ML model (18% accuracy gain over baseline) and Polygon for real-time and historical data. OAuth 2.0, Face ID, push alerts.</p>
                     <div class="project-meta-row">
                         <span class="label">Role</span>
                         <span class="value">Development</span>
