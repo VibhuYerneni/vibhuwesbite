@@ -56,26 +56,13 @@
                 <div class="project-detail-body">
                     <div class="project-detail-content">
                         <div class="project-detail-text">
-                            <h2>The Challenge & Process</h2>
-                            <p>Designed a modular ROS2 architecture for Northeastern's SEDS Lunabotics rover, implementing sensing, navigation, and control nodes with standardized interfaces allowing for a fully autonomous rover.</p>
+                            <h2 class="project-section-heading">The Challenge & Process</h2>
+                            <p>Northeastern’s SEDS Lunabotics team needed a software stack that could support a fully autonomous rover for the NASA Lunabotics-style competition. The challenge was to design an architecture that would let multiple subteams work in parallel on perception, localization, navigation, and control while keeping interfaces clear and behavior predictable under real-time constraints.</p>
+                            <p>I led the design of a modular ROS2-based system with distinct nodes for sensing, planning, and actuation. We defined topic, service, and message interfaces up front so that hardware, vision, and control could be developed and tested independently. The process involved iterating on the node graph, documenting contracts, and validating communication and timing in simulation before integration on the physical rover.</p>
 
-                            <h2>The Solution & Impact</h2>
-                            <h3>Key Achievements</h3>
-                            <ul>
-                                <li>Contributed to 3rd place finish nationally in the NASA Lunabotics style competition at the University of Iowa</li>
-                                <li>Designed modular ROS2 architecture for autonomous Lunabotics rover</li>
-                                <li>Implemented distributed nodes for perception, localization, navigation, and control</li>
-                                <li>Defined clean topic, service, and message interfaces to enable parallel team development</li>
-                            </ul>
-
-                            <h3>Technical Implementation</h3>
-                            <ul>
-                                <li><strong>Distributed Architecture:</strong> Implemented distributed nodes for perception, localization, navigation, and control</li>
-                                <li><strong>Standardized Interfaces:</strong> Defined clean topic, service, and message interfaces</li>
-                                <li><strong>Sensor Integration:</strong> Integrated sensor pipelines (IMU, encoders, vision) with navigation and actuator control</li>
-                                <li><strong>Dual Mode Support:</strong> Supported autonomous and tele-operated modes with reliable DDS-based communication</li>
-                                <li><strong>Robustness:</strong> Prioritized robustness, real-time responsiveness, and debuggability under competition constraints</li>
-                            </ul>
+                            <h2 class="project-section-heading">The Solution & Impact</h2>
+                            <p>I designed and implemented a modular ROS2 architecture for the Lunabotics rover that enabled distributed nodes for perception, localization, navigation, and control with standardized interfaces. The system supported both autonomous and tele-operated modes via reliable DDS-based communication, and integrated sensor pipelines—IMU, encoders, vision—with navigation and actuator control.</p>
+                            <p>We contributed to a 3rd place finish nationally at the NASA Lunabotics competition at the University of Iowa. Key outcomes included clean topic, service, and message definitions that allowed parallel team development, and a focus on robustness, real-time responsiveness, and debuggability under competition conditions. The architecture is documented and reusable for future rover iterations.</p>
                         </div>
                         <div class="project-detail-image">
                             <img src="assets/lunabotics-software-diagram-1.png" alt="SEDS Lunabotics Architecture Diagram 1" class="diagram-image">
@@ -96,6 +83,22 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="next-project">
+            <a href="lunabotics-electrical.html" class="next-project-link">
+                <span class="next-project-label">→ NEXT PROJECT</span>
+                <div class="next-project-content">
+                    <div class="next-project-image">
+                        <img src="assets/lunabotics-electrical.png" alt="SEDS Lunabotics - Electrical">
+                    </div>
+                    <div class="next-project-text">
+                        <h3>SEDS Lunabotics - Electrical</h3>
+                        <p>I²C communication and power hub plus a UWB beacon board for rover triangulation, fully designed in KiCad with integrated LiPo charging.</p>
+                        <span class="next-project-tag">Electrical / PCB Design</span>
+                    </div>
+                </div>
+            </a>
         </section>
     </main>
 
