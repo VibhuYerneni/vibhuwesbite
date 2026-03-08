@@ -1295,7 +1295,7 @@ body.project-page {
 
 .project-detail-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 680px;
     position: sticky;
     top: 120px;
     margin-left: 0;
@@ -1426,7 +1426,7 @@ body.project-page {
 }
 
 .project-detail-text h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
     margin-top: 2.5rem;
@@ -1439,7 +1439,7 @@ body.project-page {
 
 /* Two main section headers: large type + underline (ref style) */
 .project-section-heading {
-    font-size: 2.25rem !important;
+    font-size: 1.9rem !important;
     font-weight: 700 !important;
     color: var(--primary-color) !important;
     margin-top: 2.5rem !important;
@@ -1461,10 +1461,10 @@ body.project-page {
 }
 
 .project-detail-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
     color: var(--text-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .project-figure {
@@ -1481,7 +1481,7 @@ body.project-page {
 }
 
 .project-figure figcaption {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-light);
     line-height: 1.5;
     margin-top: 0.75rem;
@@ -1494,8 +1494,8 @@ body.project-page {
 }
 
 .project-detail-text li {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
     color: var(--text-color);
     margin-bottom: 0.8rem;
 }
